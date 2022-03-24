@@ -1,6 +1,6 @@
 // 
-console.log("hi Hadi".toLowerCase());
-console.log("hi Hadi".toLowerCase());
+console.log("hi Ivan".toLowerCase());
+console.log("hi Ivan".toLowerCase());
 console.log("    cool   ".trim);
 console.log("    cool   ".trimStart);
 console.log("    cool   ".trimEnd);
@@ -16,6 +16,7 @@ console.log("Ivan".length);
 function sum(x,y){
     return x+y;
 }
+
 
 // let str1 = "Hi";
 // let str2 = "This is cool";
@@ -170,12 +171,14 @@ if (userFirstNum >= 50 && userFirstNum <= 90 || userSecondNum >= startOfRange &&
 }
 
 //4. Create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+
+
 let text = "Ivan";
 console.log(text.substring(0,2));
 if (text.substring(0,2) == "Py") {
     console.log(text);
 } else {
-    console.log("Py"+text);
+    console.log("Py "+text);
 }
 // mehr example
 console.log( text.substring(0,2) == "Py" ? text: "Py"+text);
@@ -209,17 +212,14 @@ console.log(isBigger(15));
 console.log(isBigger(2.2));
 
 
-// mehr exaple
-
+// mehr Beispiele
 function isBigger2 (userNum) {
-    // return userNum >= 55;
     console.log(userNum >= 55);
 }
 isBigger2(23);
 isBigger2(55);
 
 // BONUS CHALLENGE: Make a variable for firstName and age and give each variable values. Create an if/else statement to check whether the person's age is less than 13. If so, print "firstName is a child". If the age is equal to or more than 13 and less than 20, print "firstName is a teenager". If the person's age is equal to or more than 20 and less than 30, then print "firstName is a young adult". If none of these conditions apply, print "firstName is a adult".
-
 let firstName = "Ivan";
 let myAgeIvan = 36;
 
@@ -227,8 +227,24 @@ if (myAgeIvan < 13) {
     console.log(firstName + " is a child");
 } else if (myAgeIvan >= 13 && myAgeIvan <= 20) {
     console.log(firstName  + " is a teenager");
-} else if (myAgeIvan >= 20 && myAgeIvan <= 30){
+} else if (myAgeIvan >= 20 && myAgeIvan < 30){
     console.log(firstName  + " is a young adult");
-} else {
+} else if (myAgeIvan >=30){
     console.log(firstName + " is an adult");
+} else {
+    console.log(firstName + " This ist not ok");
+
 }
+
+
+
+// function sum_button_click()
+// {
+//     x=parseInt(document.getElementById("x").value)
+//     y=parseInt(document.getElementById("y").value)
+//     result=sum(x,y)
+//     document.getElementById("result").value=result
+// }
+// function sum (x,y){
+//     return x*y;
+// }
