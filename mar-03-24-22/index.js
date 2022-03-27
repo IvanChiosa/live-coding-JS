@@ -40,7 +40,6 @@ if (myAgeIvan < 13) {
     console.log(firstName + " is an adult");
 } else {
     console.log(firstName + " This ist not ok");
-
 }
 
 
