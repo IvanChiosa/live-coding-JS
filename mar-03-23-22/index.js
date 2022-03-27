@@ -93,7 +93,9 @@ oddOrEven (54);
 let isDog = false;
 console.log(isDog ? "pat, pat" : "find me a dog to pat!");
 
-
+let myName = "ivaN";
+myName = myName[0].toUpperCase() + myName.substring(1).toLocaleLowerCase();
+console.log(myName.length)
 // Declare a variable named speedCheck. If speedlimit is 50km/h, and your speed is above that, print 'you're going too fast!'. If speed is lower than 50km/h, print 'You're driving below the speed limit, Oma'.
 
 let speedCheck = 50;

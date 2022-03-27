@@ -34,7 +34,7 @@ console.log(longStr.toUpperCase());
 
 let firstHi = longStr.substring(0, 2)
 
-// To upper case un d to lower case
+// To upper case und to lower case
 let myName = "ivaN";
 myName = myName[0].toUpperCase() + myName.substring(1).toLocaleLowerCase();
 console.log(myName.length)

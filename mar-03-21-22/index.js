@@ -111,7 +111,11 @@ function printOut (name,age,addresse) {
 printOut("Ivan",36,"Köln");
 printOut("Mario",36,"Berlin");
 
+function meinName(age,name,Ort){
+    console.log("I'm Ivan", age, name, "und ich Wohne in", ort);
+}
 
+meinName(36,"Iva,Köln")
 
 // Declare a variable and assign a string as its value. Make sure the string is at least 6 characters long. Print the variable to the console.
 
