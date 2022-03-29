@@ -4,9 +4,9 @@ const names = ["Ivan","Mario","Steel","Natalia"];
 console.log(names);
 console.log(names[1], names[3]);
 // {}
-console.log(names.length); // normalen menschen
-console.log(names[0][0]); // erste name und erste letter
-console.log(names[2].substring(2,4)); // zweite name un d 2,3 letter
+console.log(names.length); // normal People
+console.log(names[0][0]); // first name und first letter
+console.log(names[2].substring(2,4)); // second name und 2,3 letter
 
 
 // Bracket notation
@@ -18,6 +18,8 @@ arr[0] = 22;
 console.log(arr);
 arr[1] =12;
 console.log(arr);
+
+
 // push() // aggiungere alla coda un altro valore
 arr.push(22);
 arr.push(43);
