@@ -172,3 +172,190 @@ console.log(str44);
 
 
 // Warum random ist nur 0-1 // Die frage muss suchen für Morgen.
+
+
+
+function display (){
+    console.log("You are cool");
+}
+
+
+for (let i = 0; i <= 10; i++){
+    display();
+    console.log("Nice");
+    for (let j = 0; j <= 10; j++) {
+        console.log("Some new");
+    }
+}
+
+
+
+// come un Matriosca
+// nested loops
+for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= 10; j++) {
+      console.log(`${i} * ${j} = ${i * j} `);
+    }
+    console.log("----------");
+}
+
+
+// 0 1 2 3  0 1 2 3  0 1 2 3
+let str5 = "";
+for (let i = 1; i <= 3; i++) {
+    for (let j = 0;  j <= 3; j++ ){
+        str5 += `${j} `
+    }
+}
+console.log(str5);
+
+
+// 1 1 1 2 2 2 3 3 3 4 4 4 5 5 5
+let str6 = "";
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1;  j <= 3; j++ ){
+        str6 += `${i} `
+    }
+}
+console.log(str6);
+
+
+// +
+// ++
+// +++
+// ++++
+let str7= "";
+for (let i = 1; i <= 4; i++) {
+    for (let j = 1;  j <= 1; j++ ){
+        str7 += `+ `;
+        console.log(str7);
+    }
+}
+
+// ****
+// ***
+// **
+// *
+
+let str8= "";
+for (let i = 4; i >= 1; i--) {
+   console.log("*".repeat(i));
+}
+
+
+// Addition. Write a program to add up the numbers 1 to 20.
+// expected output: "012345678"
+
+// 19 + 10 = 29
+// 19 + 11 = 30
+// 19 + 12 = 31
+// 19 + 13 = 32
+// 19 + 14 = 33
+// 19 + 15 = 34
+// 19 + 16 = 35
+// 19 + 17 = 36
+// 19 + 18 = 37
+// 19 + 19 = 38
+for (let i = 0; i < 20; i++) {
+   for (let j = 0; j < 20; j++) {
+    console.log(i, "+", j, "=", j + i);
+   }  
+}
+
+let sum = 0;
+
+// There are i bottles of beer on the wall. Write a program that will output, "There is 1 bottle of beer on the wall." "There are 2 bottles of beer on the wall" up until there are five bottles.
+console.log(`There is 1 bottle of beer on the wall.`);
+
+
+
+// There is 1 bottle of beer on the wall.
+// There are 2 bottle of beer on the wall.
+// There are 3 bottle of beer on the wall.
+// There are 4 bottle of beer on the wall.
+// There are 5 bottle of beer on the wall
+for (let i = 2; i <= 5; i++) {
+    console.log(`There are ${i} bottle of beer on the wall.`);
+}
+
+/*
+// this is one for
++
+++
++++
+++++
+*/
+// Number
+// Op 1
+for (let i = 0; i <= 3; i++) {
+    console.log("*".repeat(i));
+  }
+  // Op 2
+  let starsShape = "";
+  for (let i = 0; i <= 3; i++) {
+    starsShape += "*";
+    console.log(starsShape);
+  }
+  // Op 3
+  let str55 = "";
+  for (let i = 1; i <= 1; i++) {
+    for (let j = 1; j <= 4; j++) {
+      str55 += "+";
+      console.log(str55);
+    }
+  }
+  // Op 4
+  
+  // Op 5
+  /*
+  // this is other for
+  ****
+  ***
+  **
+  *
+  */
+  // Op 1
+  for (let i = 3; i >= 0; i--) {
+    console.log("*".repeat(i));
+  }
+  // Op 2
+  let starDownShape;
+  for (let i = 3; i >= 0; i--) {
+    starDownShape = "";
+    for (let j = 0; j <= i; j++) {
+      starDownShape += "*";
+    }
+    console.log(starDownShape);
+  }
+  // Op 3
+  let starsWithSub = "****";
+  for (let i = 0; i <= 3; i++) {
+    console.log(starsWithSub.substring(i));
+  }
+  // Op 4
+  
+  // Addition. Write a program to add up the numbers 1 to 20.
+  let sum = 0;
+  for (let i = 1; i <= 20; i++) {
+    sum += i;
+  }
+  console.log("sum :", sum);
+  
+  // There are i bottles of beer on the wall.
+  //  Write a program that will output,
+  //"There is 1 bottle of beer on the wall."
+  // "There are 2 bottles of beer on the wall" up until there are five bottles.
+  // Warum random gibt nur 0-1 ?
+  // DRY
+  
+  let text = "";
+  for (let i = 1; i <= 5; i++) {
+    console.log(
+      `There ${i == 1 ? "is bottle" : "are bottles"} of beer on the wall`
+    );
+    if (i == 1) {
+      console.log(`There is ${i} bottle of beer on the wall`);
+    } else {
+      console.log(`There are ${i}bottles of beer on the wall`);
+    }
+  }
