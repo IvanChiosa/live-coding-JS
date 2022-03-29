@@ -262,7 +262,7 @@ for (let i = 0; i < 20; i++) {
    }  
 }
 
-let sum = 0;
+// let sum = 0;
 
 // There are i bottles of beer on the wall. Write a program that will output, "There is 1 bottle of beer on the wall." "There are 2 bottles of beer on the wall" up until there are five bottles.
 console.log(`There is 1 bottle of beer on the wall.`);
