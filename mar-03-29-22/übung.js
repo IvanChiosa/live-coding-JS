@@ -163,7 +163,6 @@ function findGreatest (arr, num){
     }
     return console.log(str);
 }
-
 findGreatest([1,2,3,5], 8);
 
 
