@@ -66,7 +66,7 @@ function clearUP(arr) {
 clearUP([1, 4, 4, 7, 7, 7]);
 
 // splice()  // deleted die zeile.
-//               0          1            2
+//               0          1            2            4
 const days = ["Montag", "Mittwoch", "Donnerstag", "Freitag"]
 let deletedItems = days.splice(1,2);  
 console.log(deletedItems);
@@ -90,7 +90,7 @@ console.log(cities);
 let str = "This. is a long day";
 console.table(str.split(" ").length);
 
-// join()  was muss mache 
+// join()  was muss machen
 const text = ["Hi", "I", "am", "Ivan"];
 console.log(text.join(" "));
 
