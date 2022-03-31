@@ -243,3 +243,30 @@ console.log(names);
 
 let longText = "Today is very long day";
 console.table(longText.split(""));
+
+
+// snake_case ➞ camelCase Create a function toCamelCase() that takes a single string in snake_case and converts it into camelCase.
+// Examples:
+
+// toCamelCase("hello_world") ➞ "helloWorld"
+
+// function, method, loop/for, string
+
+
+function camelCase (str) {
+
+  let ergebnis = "";
+  let newArr = str.toLowerCase().split("_");
+
+  for(let i = 1; i < newArr.length;i++){
+
+    newArr[i] = newArr[i][0].toUpperCase() + newArr[i].substring(1);
+  }
+
+  ergebnis = newArr.join("")
+
+
+  return console.table(ergebnis);
+
+}
+camelCase("heLlo_woRld_ivAn");
