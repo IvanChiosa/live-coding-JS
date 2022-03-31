@@ -161,11 +161,11 @@ const displayArrow = (str) => console.log(str);
 // dictionary("tri", ["triplet", "tries", "trip", "piano", "tree"]) ➞ ["triplet", "tries", trip"]
 // dictionary("beau", ["pastry", "delicious", "name", "boring"]) ➞ []
 
-
+console.log("-----Ivan-----");
 const dictionary = (str, arr) => {
     let resultArr = [];
 
-    for ( let i = 0; i <arr.length;i++){
+    for ( let i = 0; i < arr.length ;i++){
         if(arr[i].substring(0,str.length) == str){
             resultArr.push(arr[i]);
         }
@@ -173,9 +173,9 @@ const dictionary = (str, arr) => {
     }
     return console.log(resultArr);;
 }
-dictionary("bu", ["button", "breakfast", "border"]);
+dictionary("butl", ["breakfast", "border", "button" ]);
 
-
+console.log("------");
 // / Hello Alex. Create an array filled with your friends' and family's names. Loop over the array and greet each friend. Bonus: Print the indexes of each item in the array. Examples:
 // [Maria, Mike, Paul, Doven] ➞ expected output: "Hello Maria! Hello Mike! Hello Paul! Hello Doven!
 
@@ -195,7 +195,6 @@ const greeting2 = (arr) => {
 greeting2(["Maria", "Mike", "Paul", "Doven"]);
 
 
-
 // // sumOfNumbers. Create a program that adds up the numbers in an array (of at least 3 numbers). Bonus: Print to screen both the sum and the product of these numbers.
 // function arr loop number
 // old school function
@@ -206,9 +205,16 @@ function sumOfNumbers(arr) {
     }
     return console.log(sum);
 }
-
 sumOfNumbers([2,3,5]); // 10
 
 
 // Es6
+const sumOfNumb = (arr) =>{
+    let sum = 0;
+    for (let i = 0; i < arr.length;i++){
+        sum += arr[i];
+    }
+    return console.log(sum);
+}
+sumOfNumb([2,3,5]); // 10
 
