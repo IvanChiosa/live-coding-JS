@@ -267,6 +267,5 @@ function camelCase (str) {
 
 
   return console.table(ergebnis);
-
 }
 camelCase("heLlo_woRld_ivAn");
