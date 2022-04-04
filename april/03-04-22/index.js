@@ -82,7 +82,7 @@ console.log(country);
 console.table(country.push("Tiraspol"));
 
 let myCountry1 = country.unshift("Milan");
-console.log(country);
+console.log(country); // The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
 
 
 
