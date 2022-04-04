@@ -9,15 +9,14 @@
 // Bonus: Add an additional argument to the function that takes the conversion rate of human to dog years.
 function calculateDogAge(age) {
     let ageDog = 7 * age;
-    
     console.log("Your doggie is age " , + ageDog + " years old in dog years!");
 }
-
-// secondo esempio
 calculateDogAge(2);
 calculateDogAge(3);
 calculateDogAge(222, 7);
 
+
+// secondo esempio
 function calculateDogAge1 (puppyAge, rate){
     if (typeof puppyAge == "number" && typeof rate == "number"){
         return console.log("Your doggie is age " , + puppyAge + " years old" + rate + "in dog years!");
@@ -53,17 +52,22 @@ function calculateSupply (myAge,maxAge,amountDay) {
 calculateSupply(41,80,2.5);
 console.log("------");
 
+
 // zweite beispiel
 function calculateSupply1(age,amount) {
     let maxMyAge = 109;
     upComingDays = (maxMyAge - age) * 365;
     let totalFood = upComingDays * amount;
-    
-    return console.log(`You will need ${totalFood} to last you until the ripe old age of ${maxMyAge}. You will still have ${upComingDays}`);
+
+    if (typeof age == "number" && typeof amount == "number") {
+        return console.log(`You will need ${totalFood} to last you until the ripe old age of ${maxMyAge}. You will still have ${upComingDays}`);
+    } else {
+        return console.log(`It's not a number, Please write a number`);
+    }
 }
 calculateSupply1(36, 2);
 calculateSupply1(44, 10);
-calculateSupply1(20, 3);
+calculateSupply1("Hi", 3);
 console.log("-------");
 
 
@@ -100,7 +104,48 @@ fahrenheitToCelsius("800");
 // outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
 // Call that function 3 times with 3 different values for the arguments
 function tellFortune (numChildren,partnerName,location,jobTitle) {
-
-    console.log(`I have ${numChildren} and mein Name is ${partnerName} i live ${location} i work als ${jobTitle}`);
+    if (typeof numChildren == "number" && typeof partnerName == "string" && typeof location == "string" && typeof jobTitle == "string" ) {
+        return console.log(`I have ${numChildren} and mein Name is ${partnerName} i live ${location} i work als ${jobTitle}`);
+    } else {
+        return console.log(`Did not compile right check again!`);
+    }
 }
-tellFortune(2,"Ivan","Köln", "Lernen");
+tellFortune(2, 2,"Köln", "Lernen");
+
+
+
+function generatePass(pLength){
+
+    var keyListAlpha="abcdefghijklmnopqrstuvwxyz",
+        keyListInt="123456789",
+        keyListSpec="!@#_",
+        password='';
+    var len = Math.ceil(pLength/2);
+    len = len - 1;
+    var lenSpec = pLength-2*len;
+
+    for (i=0;i<len;i++) {
+        password+=keyListAlpha.charAt(Math.floor(Math.random()*keyListAlpha.length));
+        password+=keyListInt.charAt(Math.floor(Math.random()*keyListInt.length));
+    }
+
+    for (i=0;i<lenSpec;i++) {
+        password+=keyListSpec.charAt(Math.floor(Math.random()*keyListSpec.length));
+
+    password=password.split('').sort(function(){return 0.5-Math.random()}).join('');
+    }
+    return console.log(password);;
+}
+
+//Fruits
+// Create a function named printFavoriteFruit. Declare a variable outside of the function and store your favorite fruit as a value. Reassign the variable within the function and print "My favorite fruit is: x"
+
+let favoriteFruit = 10;
+function printFavoriteFruit (favoriteFruit) {
+    if (typeof favoriteFruit == "string") {
+        console.log(`My favorite fruit is: ${favoriteFruit}`);
+    } else {
+        return console.log("You are giv not a right value...");
+    }
+}
+printFavoriteFruit(favoriteFruit);
