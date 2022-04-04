@@ -57,7 +57,6 @@ function longestCountryName (arr) {
 
     for (let i = 0; i < arr.length;i++){
         if (newLongestCountryName.length < arr[i].length){
- 
             newLongestCountryName = arr[i];
         }
     }
@@ -65,3 +64,34 @@ function longestCountryName (arr) {
 }
 
 longestCountryName(["Australia", "Germany", "United States of America"]);
+
+
+
+
+let country = ["London", "Rome", "Berlin", "Bucharest"];
+
+
+
+console.log(country); // Result country [ 'London', 'Rome', 'Berlin', 'Bucharest' ]
+
+console.table(country.pop()); //The pop() method removes the last element from an array and returns that element. This method changes the length of the array.  // result: Bucharest
+
+let myCountry = country.push("Chisinau");  // The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+console.log(country);
+console.table(country.push("Tiraspol"));
+
+let myCountry1 = country.unshift("Milan");
+console.log(country);
+
+
+
+
+
+let array1 = [50,3,6,30,5];
+
+let found = array1.find(element => element > 20);
+
+console.log(found);  // The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+
+
