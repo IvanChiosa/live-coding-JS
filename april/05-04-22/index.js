@@ -32,6 +32,7 @@ console.log(bigNum);
 
 
 // function declarations as value
+// const functionName == function(parameters) {...}
 
 const iDoSomething = function (){
     // something 
@@ -39,10 +40,47 @@ const iDoSomething = function (){
 }
 
 // Function declaration as value
-const iDoSomethingEs6 = (str) => "Something";
+// const functionName = (parameters) => {}
+const iDoSomethingEs6 = (str) => `Something ${str}`;
 console.log(iDoSomething());
 console.log(iDoSomethingEs6());
-
-
 const trueOderFalse = (x,y) => x < y;
 console.log(trueOderFalse());
+
+
+
+// Invoke the function AKA function call
+iGreet()
+
+
+// Call stack 65536
+
+
+// callback => wenn du anrufen zu java fur eine function un du kricst egebnise zu haben 
+function iDoCoffee(){
+
+    let milk = iHaveMilk();
+    let sweetener = iHaveSweetener();
+    let eis = iHaveEis();
+    let spoon = iHaveSpoon();
+
+    return console.log(`Your coffee with ${milk}  ${sweetener} ${eis} and ${spoon}is ready.`);
+}
+
+const iHaveMilk = () => `Milk`;
+const iHaveSweetener = () => `Sweetner`;
+const iHaveEis = () => `I have Eis`;
+const iHaveSpoon = () => `I have spoon `;
+
+console.log(iDoCoffee());
+
+
+// map Es6 => 2015
+const names = ["Ivan", "Nancy","Olga","Steel"];
+const greetingArr = names.map((name,i)=> `Hey ${name} your index num is ${i}`);
+console.log(greetingArr);
+
+// String []   vs charAt()
+let str = "Ivan";
+console.log(str[0]); // I
+console.log(str.charAt(true));
