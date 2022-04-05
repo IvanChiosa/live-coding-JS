@@ -137,6 +137,31 @@ function generatePass(pLength){
     return console.log(password);;
 }
 
+
+// Print Exponential Values
+// Write a function that accepts two numbers and validate that they are numbers.
+// After that, the function should print y exponential values starting from x.
+// For example if we have function(3, 5) The function should print 3 9 27 81 243. Prints 5 exponential values of 3.
+// function(2, 8) The function prints 2 4 8 16 32 64 128 256. Prints 8 exponential values of 2.
+
+function printExponentialValues (num1,num2) {
+    let x = 0;
+    let y = 0;
+    let soma = 0;
+
+    for (let i = 0; i < soma.length;i++) {
+        soma[i] = soma[i] 
+
+    }
+
+    console.log(`The function `);
+
+}
+printExponentialValues(2,3)
+
+
+
+
 //Fruits
 // Create a function named printFavoriteFruit. Declare a variable outside of the function and store your favorite fruit as a value. Reassign the variable within the function and print "My favorite fruit is: x"
 
@@ -145,7 +170,7 @@ function printFavoriteFruit (favoriteFruit) {
     if (typeof favoriteFruit == "string") {
         console.log(`My favorite fruit is: ${favoriteFruit}`);
     } else {
-        return console.log("You are giv not a right value...");
+        return console.log("You are give not a right value...");
     }
 }
 printFavoriteFruit(favoriteFruit);
