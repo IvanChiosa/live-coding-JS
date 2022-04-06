@@ -114,6 +114,8 @@ tellFortune(2, 2,"Köln", "Lernen");
 
 
 
+console.log("----Von Hier----");
+
 function generatePass(pLength){
 
     var keyListAlpha="abcdefghijklmnopqrstuvwxyz",
