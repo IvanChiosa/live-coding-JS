@@ -3,8 +3,10 @@
 // // i.e. findVowels(“this is a string”) ➞ 4
 // ---------------------------------
 // program to count the number of vowels in a string
-function vowelCount(str1)
-{
+
+//
+function vowelCount(str1){
+    
   let vowel_list = 'AEIOU';
   let vcount = 0;
   
@@ -18,7 +20,8 @@ function vowelCount(str1)
   }
   return vcount;
 }
-console.log(vowelCount("AEIOU"));
+console.log(vowelCount("this is a string"));
+
 
 
 
@@ -59,13 +62,6 @@ function isPalindromeAKA(str) {
 isPalindromeAKA("palindrome");
 isPalindromeAKA("pal");
 
-let meinName = "Ivan";
-
-if (meinName.startsWith("Py")) {
-    console.log(meinName);
-} else {
-    console.log("It's not a Py...");
-}
 
 
 // // This question has 2 parts
@@ -79,3 +75,4 @@ if (meinName.startsWith("Py")) {
 // // Part b) write a for-loop that runs 125 times, each time calling the function you created in part a with the current iteration number.
 // ----------------------------
 // // Write an arrow function that takes in 5 numbers as its parameters and returns the largest one
+
