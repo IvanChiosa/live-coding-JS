@@ -145,12 +145,12 @@ generatePassword();
 // After that, the function should print y exponential values starting from x.
 // For example if we have function(3, 5) The function should print 3 9 27 81 243. Prints 5 exponential values of 3.
 // function(2, 8) The function prints 2 4 8 16 32 64 128 256. Prints 8 exponential values of 2.
-function numbersValidate(num1, num2) {
-    if (typeof num1 == "number" && typeof num2 == "number") {
+function numbersValidate(x, y) {
+    if (typeof x == "number" && typeof y == "number") {
         let result = [];
-        for (let i = 1; i <= num2; i++) {
-            let items = num1 ** i;
-            // let items = Math.pow(num1, i);
+        for (let i = 1; i <= y; i++) {
+            let items = x ** i;
+            // let items = Math.pow(x, i);
             result.push(items);
         }
         console.log(result.join(" "));
@@ -171,6 +171,17 @@ printFavoriteFruit();
 
 
 
+// SCOPE 
+function scopeTest(){
+     i = 0; //
+
+}
+scopeTest();
+console.log(i);
+
+
+
+console.log("------01-----");
 //01.
 // Erstelle ein Program, das ein gegebenes Array kopiert und zurückgibt. Drucke das Ergebnis in die Konsole.
 //Beispiele:
@@ -178,15 +189,29 @@ printFavoriteFruit();
 //copyArray([5, -20, "Salem", true]) => [5, -20, "Salem", true]
 //copyArray([]) => []
 function copyArray (arr) {
+    arr.slice(0);
     return console.log(arr);
 }
 copyArray([12, 66, 10]);
-copyArray([5, -20, "Salem", true]);
+copyArray([5, -20, "Ivan", true]);
 copyArray([]);
 
 
+function copyArray2(arr) {
+
+    let output = [];
+    output.push(...arr);
+    return   console.log(output);
+}
+copyArray2([12, 66, 10]);
+copyArray2([5, -20, "Ivan", true]);
+copyArray2([]);
 
 
+
+
+
+console.log("------02-----");
 //02. 
 //Schreibe ein Programm, um ein String umzukehren. 
 //Beispiele:
@@ -210,11 +235,18 @@ function reverseString(str) {
 }
  
 // take input from the user
-const string = ("Hallo Welt");
+const string = ("Hallo World");
 
 const result = reverseString(string);
 console.log(result);
 
+
+
+// 2 beispiel fur diese function:
+function reverseString1 (string){
+    return string.split("").reverse().join("");
+}
+console.log(reverseString1("Hallo World"));
 
 
 
@@ -228,26 +260,36 @@ console.log(result);
 // missingNums([7, 2, 3, 6, 5, 9, 1, 4, 8]) ➞ 10
 // missingNums([10, 5, 1, 2, 4, 6, 8, 3, 9]) ➞ 7
 
-function missingNumber(input) {
-    let result = [];
+// function missingNumber(input) {
+//     let result = [];
   
-    for (
-      let i = 0, targetValue = input[0];
-      targetValue <= input[input.length - 1];
-      targetValue++
-    ) {
-      if (input[i] != targetValue) {
-        result.push(targetValue);
-      } else {
-        i++;
-      }
+//     for (
+//       let i = 0, targetValue = input[0];
+//       targetValue <= input[input.length - 1];
+//       targetValue++
+//     ) {
+//       if (input[i] != targetValue) {
+//         result.push(targetValue);
+//       } else {
+//         i++;
+//       }
+//     }
+  
+//     return result;
+//   }
+// console.log(missingNumber(2,3));  
+
+function missingNumber1 (arr) {
+    let missingNum = 0;
+
+    for (let i = 1; i <= 10;i++){
+        if (!arr.includes(i)) {
+            return(missingNum = i);
+        }
     }
-  
-    return result;
-  }
- console.log(missingNumber([1,2]));  
-
-
+    return missingNum;
+}
+console.log(missingNumber1([2,3]));
   
 
 
