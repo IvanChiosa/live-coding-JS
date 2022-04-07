@@ -250,7 +250,7 @@ console.log(reverseString1("Hallo World"));
 
 
 
-
+console.log("------03-----");
 //03. 
 //Missing Number. Create a function that takes an array of all integers between 1 and 10 (excluding one) and returns the missing integer.
 
@@ -292,7 +292,10 @@ function missingNumber1 (arr) {
 console.log(missingNumber1([2,3]));
   
 
-
+console.log("------04-----");
 //04. 
 //Alphabetical Order. Create a function to sort a string into alphabetical order. NB: assume numbers, symbols and punctuation are not included in the string.
 // i.e. alphaOrder("webdev") ➞ "bdeevw"
+const alphabetical = (str) => console.log(str.split("").sort().join(""));
+
+alphabetical("webdev");
