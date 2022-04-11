@@ -137,3 +137,59 @@ function convertUppFirstLetter(str) {
     return console.log(newConvertUppFirstLetter);
 }
 convertUppFirstLetter("the quick brown fox"); // resultat newConvertUppFirstLetter
+
+
+console.log("----11----");
+const shopping = ['Bread', 'Milk', 'Cheese', 'Hummus', 'Noodles'];
+console.table(shopping);
+console.table(shopping[2]);
+
+
+
+console.log("----12----");
+const random = [10, 63, 89, [56, 35, 96]];
+console.table(random[1]); // resultat 63
+
+
+
+console.log("----13----");
+const birds = ['Parrot', 'Falcon', 'Owl']
+console.log(birds.indexOf(`Owl`)); // resultat (2)
+
+
+console.log("----14----");
+const cities = ['Manchester', 'Liverpool'];
+console.log(cities.pop()); // resultat (Liverpool)
+
+
+console.log("----15----");
+let fruits = [`Apfel`, `Banana`, `Ananas`];
+console.log(fruits[2]); // resultat Ananas
+
+
+console.log("----16----");
+// 1- Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+//  Example string : 'the quick brown fox'
+// function one param to UpperCase
+function toUpperCaseFirstLetter (str) {
+    let newToUpperCaseFirstLetter = str.toLowerCase().split(" ");
+
+    for (let i = 0; i < newToUpperCaseFirstLetter.length; i++){
+        newToUpperCaseFirstLetter[i] = newToUpperCaseFirstLetter[i][0].toUpperCase() + newToUpperCaseFirstLetter[i].substring(1);  
+    }
+    newToUpperCaseFirstLetter = newToUpperCaseFirstLetter.join(" ");
+    return console.log(newToUpperCaseFirstLetter);
+}
+toUpperCaseFirstLetter('the quick brown fox'); // resultat The Quick Brown Fox
+
+
+
+console.log("----17----");
+// 2- Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
+// Longest_Country_Name(
+//     ["Australia", 
+//     "Germany", 
+//     "United States of America"]
+//     )
+// Expected output : "United States of America"
+// function array, length, loops, if/condition
