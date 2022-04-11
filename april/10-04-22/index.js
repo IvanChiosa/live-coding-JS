@@ -80,30 +80,20 @@ function iDoTea() {
 }
 const iDoMilk = () => `milk`;
 const iDoSugar = () => `sugar`;
-const iDoCup = () => `cup`
+const iDoCup = () => `cup`;
 console.log(iDoTea());
 
+// noch functio mit Callback
+function iDoSport(){
 
+    let towel = iHaveTowel();
+    let bottleOfWater = iHaveBottleOfWater();
+    let tshirt = iHaveTshirt();
 
+    return console.log(`When i go in Gym i need ${towel}, ${bottleOfWater} und ${tshirt} then I'm full`);
+}
+const iHaveTowel = () => `towel`;
+const iHaveBottleOfWater = () => `bottle of water`;
+const iHaveTshirt = () => `T-shirt`;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(iDoSport());

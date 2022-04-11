@@ -20,7 +20,7 @@ console.log(myCitys[2]);
 function myString(str) {
     let newString = str.toLowerCase().split(" ");
 
-    for (let i = 0; i <newString.length;i++){
+    for (let i = 0; i < newString.length;i++){
         newString[i] = newString[i][0].toUpperCase() + newString[i].substring(1);
     }
     newString = newString.join(" ");

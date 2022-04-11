@@ -56,7 +56,7 @@ iGreet()
 // Call stack 65536
 
 
-// callback => wenn du anrufen zu java fur eine function un du kricst egebnise zu haben 
+// callback => wenn du anrufen zu java fur eine function un du kriegst egebnise zu haben 
 function iDoCoffee(){
 
     let milk = iHaveMilk();
