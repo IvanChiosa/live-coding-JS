@@ -6,7 +6,6 @@ const dictionary = (str, arr) => {
         if(arr[i].substring(0,str.length) == str){
             resultArr.push(arr[i]);
         }
-
     }
     return console.log(resultArr);;
 }
