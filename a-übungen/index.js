@@ -193,3 +193,68 @@ console.log("----17----");
 //     )
 // Expected output : "United States of America"
 // function array, length, loops, if/condition
+function longestCountryName(arr) {
+    newlongestCountryName = "";
+
+    for (let i = 0; i < arr.length;i++) {
+        if (newlongestCountryName.length < arr[i].length) {
+            newlongestCountryName = arr[i];
+        }
+    }
+    return console.log(newlongestCountryName);
+}
+longestCountryName (["Australia", "Germany", "United States of America"]); // resultat United States of America
+
+
+
+console.log("----18----");
+let country = ["London", "Rome", "Berlin", "Bucharest"];
+console.table(country);
+// ┌─────────┬─────────────┐
+// │ (index) │   Values    │
+// ├─────────┼─────────────┤
+// │    0    │  'London'   │
+// │    1    │   'Rome'    │
+// │    2    │  'Berlin'   │
+// │    3    │ 'Bucharest' │
+// └─────────┴─────────────┘
+console.log(country.pop());
+// ┌─────────┬──────────┐
+// │ (index) │  Values  │
+// ├─────────┼──────────┤
+// │    0    │ 'London' │
+// │    1    │  'Rome'  │
+// │    2    │ 'Berlin' │
+// └─────────┴──────────┘
+console.table(country);
+console.log(country.push("Chisianu"));
+console.table(country);
+// ┌─────────┬────────────┐
+// │ (index) │   Values   │
+// ├─────────┼────────────┤
+// │    0    │  'London'  │
+// │    1    │   'Rome'   │
+// │    2    │  'Berlin'  │
+// │    3    │ 'Chisianu' │
+// └─────────┴────────────┘
+
+
+console.log("----18----");
+// The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+let array1 = [50, 30, 90, 5];
+console.log(array1.find(element => element > 30));
+
+
+console.log("----19----");
+const dictionary = (str, arr) => {
+    let newDictionary = [];
+
+    for ( let i = 0; i < arr.length;i++){
+        if(arr[i].substring(0,str.length) == str){
+            newDictionary.push(arr[i]);
+        }
+        return console.log(newDictionary);
+    }
+    
+}
+dictionary("button", ["breakfast", "border", "button" ]);
