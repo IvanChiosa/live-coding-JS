@@ -5,7 +5,6 @@ let firstName = "Ivan";
 
 function printGreeting(first) {
     console.log("Hallo World", first);
-
 }
 printGreeting("Ivan");
 
