@@ -558,3 +558,52 @@ for (const key of iterator) {
 // expected output: 0
 // expected output: 1
 // expected output: 2
+
+
+
+console.log("----39----");
+const array4 = ['one', 'two', 'three'];
+console.log('array1:', array4);
+// expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array4.reverse();
+console.log('reversed:', reversed);
+// expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log('array1:', array4);
+// expected output: "array1:" Array ["three", "two", "one"]
+
+
+console.log("----40----");
+const array5 = [1, 2, 3];
+
+const firstElement = array5.shift();
+
+console.log(array5);
+// expected output: Array [2, 3]
+
+console.log(firstElement);
+// expected output: 1
+
+
+console.log("----41----");
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
