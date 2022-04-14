@@ -510,3 +510,51 @@ index = -2;
 
 console.log(`Using an index of ${index} item returned is ${array2.at(index)}`);
 // expected output: "Using an index of -2 item returned is 130"
+
+
+
+console.log("----36----");
+function updateVegetablesCollection (veggies, veggie) {
+    if (veggies.indexOf(veggie) === -1) {
+        veggies.push(veggie);
+        console.log('New veggies collection is : ' + veggies);
+    } else {
+        console.log(veggie + ' already exists in the veggies collection.');
+    }
+}
+
+const veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+updateVegetablesCollection(veggies, 'gurken');
+// New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+updateVegetablesCollection(veggies, 'spinach');
+// spinach already exists in the veggies collection.
+
+
+
+console.log("----37----");
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected output: "FireAirWater"
+
+console.log(elements.join(' => '));
+// expected output: "Fire-Air-Water"
+
+
+
+
+console.log("----38----");
+const array3 = ['a', 'b', 'c'];
+const iterator = array3.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// expected output: 0
+// expected output: 1
+// expected output: 2
