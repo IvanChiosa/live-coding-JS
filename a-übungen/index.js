@@ -607,3 +607,36 @@ console.log(animals.slice(2, -1));
 
 console.log(animals.slice());
 // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+
+
+console.log("----42----");
+// program to check if the number is even or odd
+// take input from the user
+const number = 22;
+
+//check if the number is even
+if(number % 2 == 0) {
+    console.log("The number is even.");
+}
+
+// if the number is odd
+else {
+    console.log("The number is odd.");
+}  // resultat    //The number is even(22)(numeri pari)                     //The number is odd(21)(numeri dispari)
+
+
+
+
+console.log("----43----");
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+
+
+console.log("----44----");
+const months1 = ['Jan', 'Februar', 'December', 'March'];
+months1.sort();
+console.log(months1.join(" "));
