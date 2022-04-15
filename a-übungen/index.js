@@ -639,4 +639,62 @@ console.log(months);
 console.log("----44----");
 const months1 = ['Jan', 'Februar', 'December', 'March'];
 months1.sort();
-console.log(months1.join(" "));
+console.log(months1.join(" ")); // resultat  December Februar Jan March
+
+
+
+
+console.log("----45----");
+const arr = ['a', 'c', 'b', 'm'];
+console.log(arr.sort().join(" ")); // resultat    a b c m
+
+
+
+console.log("----46----");
+const months2 = ['Jan', 'March', 'April', 'June'];
+months2.splice(1, 0, 'Feb');
+// inserts at index 1
+console.log(months2);
+// expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months2.splice(4, 1, 'May');
+// replaces 1 element at index 4
+console.log(months2);
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
+
+
+console.log("----47----");
+const array6 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+const localeString = array6.toLocaleString('de', { timeZone: 'UTC' });
+
+console.log(localeString);
+// expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+
+
+
+console.log("----48----");
+const array7 = [1, 2, 'a', '1a'];
+
+console.log(array7.toString());
+// expected output: "1,2,a,1a"
+
+
+console.log("----49----");
+const array8 = [1,3,6, 'b', 'c']
+console.log(array8);
+
+
+console.log("----50----");
+const array9 = ['a', 'b', 'c'];
+const iterator1 = array9.values();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
