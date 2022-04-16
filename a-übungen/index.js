@@ -720,3 +720,14 @@ const array13 = array11.concat(array12);
 
 console.log(array13);
 // expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+
+
+console.log("----53----");
+const array14 = [5, 12, 8, 130, 44];
+
+const found = array14.find(element => element > 10);
+
+console.log(found);
+// expected output: 12
+
