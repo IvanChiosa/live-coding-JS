@@ -698,3 +698,25 @@ for (const value of iterator1) {
 // expected output: "a"
 // expected output: "b"
 // expected output: "c"
+
+
+
+console.log("----51----");
+const array10 = [1, 2, 3];
+
+const firstElement1 = array10.shift();
+
+console.log(array1);
+// expected output: Array [2, 3]
+
+console.log(firstElement1);
+// expected output: 1
+
+
+console.log("----52----");
+const array11 = ['a', 'b', 'c'];
+const array12 = ['d', 'e', 'f'];
+const array13 = array11.concat(array12);
+
+console.log(array13);
+// expected output: Array ["a", "b", "c", "d", "e", "f"]
