@@ -731,3 +731,50 @@ const found = array14.find(element => element > 10);
 console.log(found);
 // expected output: 12
 
+
+console.log("----54----");
+function sum(a,b) {
+    return   console.log(a + b);
+}
+let result = sum(1,2);
+console.log(sum(8,9));
+
+
+console.log("----55----");
+function uppCase(str) {
+    let newUppeCase = str.toLowerCase().split(" ");
+
+    for (let i = 0; i < newUppeCase.length; i++) {
+        newUppeCase[i] = newUppeCase[i][0].toUpperCase() + newUppeCase[i].substring(1);
+    }
+    newUppeCase = newUppeCase.join(" ");
+    return console.log(newUppeCase); // resultat Ich Bin Ivan
+    
+}
+uppCase("ich bin ivan");
+
+console.log("----56----");
+function uppeCaseAll(str) {
+    newUppeCaseAll = str.toLowerCase().split(" ");
+
+    for (let i = 0; i < newUppeCaseAll.length; i++) {
+        newUppeCaseAll[i] = newUppeCaseAll[i].toUpperCase();
+    }
+    newUppeCaseAll = newUppeCaseAll.join(" ");
+    return console.log(newUppeCaseAll);
+}
+uppeCaseAll("ich bin ivan vom köln"); // resultat ICH BIN IVAN VOM KÖLN
+
+
+function isEven(a) {
+    if ( a % 2 == 0 ){
+        isEven = true;
+
+    }else {
+
+        return false;
+    }
+    return isEven;
+}
+console.log(isEven(5));
+console.log(isEven(2));
