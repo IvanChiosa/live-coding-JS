@@ -766,15 +766,16 @@ function uppeCaseAll(str) {
 uppeCaseAll("ich bin ivan vom köln"); // resultat ICH BIN IVAN VOM KÖLN
 
 
+console.log("----57----");
 function isEven(a) {
     if ( a % 2 == 0 ){
         isEven = true;
-
     }else {
-
         return false;
     }
     return isEven;
 }
 console.log(isEven(5));
 console.log(isEven(2));
+
+
