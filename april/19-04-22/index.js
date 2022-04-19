@@ -88,7 +88,7 @@ console.log("--------------05-------------------------");
 // isFourLetters(["Dog", "Cat", "Deer"]) ➞ ["Deer"]
 function isFourLetters(arr) {
 
-    newIsFourLetters = [];
+    const newIsFourLetters = [];
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].length == 4) {
@@ -121,7 +121,7 @@ const amplify = (num) => {
 
     for (let i = 1; i <= num; i++) {
         let elem = i;
-        if (i % 4 == 0) {
+        if (i % 4 === 0) {
             elem = i * 10;
         }
         newArr.push(elem);
