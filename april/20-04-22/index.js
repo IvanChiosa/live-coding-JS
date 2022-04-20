@@ -56,19 +56,43 @@ console.log(personObj["age"]);
 // method 2
 console.log(personObj.toolStack[2]);
 
+
+
+// Tell us more about you
 console.log("--------Ivan Object-------");
 const objIvan = {
     firstName: "Ivan",
     lastName: "Chiosa",
     age: 36,
     city: "Köln",
-    street: "Raderberger str 117a",
+    street: "Raderber str.",
     born: "Republik Moldaw",
+    dateOfBirth: "01.01.2000",
+    cost: 3000,
     hobby: ["Gym", "travel", "Friends"],
     study: ["HTML", "CSS", "JavaScript"],
-}
+    auto: {
+        name: "Seat",
+        color: "Blu",
+    },
+    dispaly: function () {
+        // hey Ivan, you are 36 years old. I hope you are having fun in Köln
+        console.log(`Hey ${this.firstName + " " + this.lastName}, you are ${this.age}. I hope you are having fun in Köln`);
+
+    }
+};
+
+
+objIvan.dispaly();
+console.log("------");
+console.log(objIvan.auto.color);
 console.log(objIvan);
 console.log(objIvan.street);
+console.log(objIvan["born"]);
+objIvan.print = function () {
+    console.log("This ist eine Object");
+}
+console.log();
 
 console.log("----------");
 
@@ -88,18 +112,32 @@ console.log(obj);
 
 // Assigning using bracket notation, more used for an empty object
 
-// Tell us more about you
 
+console.log("-----");
 // Object.keys
+console.table(Object.keys(objIvan));
 
 // Object.values
+console.log(Object.values(objIvan));
+
 
 // Object.assign
+const obj1 = {kids: 2, cars: 1 };
+const obj2 = {colors: ["red", "orange"], pet: "dog"};
+const totalObj = Object.assign({name: "Ivan", age: 36}, obj1, obj2);
+console.log(totalObj);
+
+
+
+// Object.seal()
+Object.seal(objIvan);
+objIvan.age = 22;
+console.log(objIvan);
+console.log(Object.isSealed(objIvan));
+
 
 // Object.defineProperty()
 
 // Object.defineProperties()
 
 // Object.hasOwnProperty()
-
-// Object.seal()
