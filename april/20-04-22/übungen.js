@@ -5,12 +5,15 @@ const person = {
     class: "4A",
     course: "English",
 };
+
+// function return, array, object.keys
+// Expected output:
+//   ["name", "class", "course"]
 function display () {
     console.log(Object.keys(person));
 }
 display();
-// Expected output:
-//   ["name", "class", "course"]
+
 
 
 
@@ -20,7 +23,7 @@ const student = {
     firstName: "Zain",
     lastName: "Oil",
     class: "D05",
-    dispaly1: function () {
+    dispaly1: function () {  /// das ist eien emethode i eine value
         console.log(`${this.firstName + " " + this.lastName}, is a student ${this.class}`);
     }
 };
@@ -93,7 +96,7 @@ scrabbleTiles(scrabble);
 // {} ➞ true
 // {a: 1} ➞ false
  const emptyObj = (obj) => {
-  
+
     const arr = Object.keys(obj);
     if (arr.length == 0) {
         return console.log(true);

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../../DCIBasic"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../CodeImportant"
+		},
+		{
+			"path": "../../../../Portfolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio"
+	}
+}
