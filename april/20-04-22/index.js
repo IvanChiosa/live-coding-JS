@@ -134,10 +134,3 @@ Object.seal(objIvan);
 objIvan.age = 22;
 console.log(objIvan);
 console.log(Object.isSealed(objIvan));
-
-
-// Object.defineProperty()
-
-// Object.defineProperties()
-
-// Object.hasOwnProperty()
