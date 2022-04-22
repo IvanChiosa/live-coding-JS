@@ -72,3 +72,5 @@ personB.firstName = "Mario";
 
 console.log(personA);
 console.log(personB);
+
+let nameA = "Natalia schmitz";

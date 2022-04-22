@@ -1,6 +1,4 @@
 
-
-
 // Object 
 const obj = {}; // emty obj in java script
 const obj2 = new Object();
