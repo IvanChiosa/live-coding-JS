@@ -73,3 +73,13 @@ console.log(userInfoObj.lastName);
 // Object.hasOwnProperty()
 console.log(userInfoObj.hasOwnProperty("name"));
 console.log(userInfoObj.hasOwnProperty("age"));
+
+
+const obj1 = {
+    prop: 42,
+};
+
+console.log(obj1);
+Object.freeze(obj1);
+obj1.prop = 33;
+console.log(obj1.prop);

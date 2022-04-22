@@ -134,3 +134,20 @@ Object.seal(objIvan);
 objIvan.age = 22;
 console.log(objIvan);
 console.log(Object.isSealed(objIvan));
+
+
+console.log("-------");
+function circuitPower(voltage, current) {
+    let sum = voltage * current;
+	return console.log(sum);
+}
+circuitPower(110, 3);
+circuitPower(230, 10);
+circuitPower(480, 20);
+
+
+function nextEdge (side1, side2) {
+    return console.log((side1 + side2)-1);
+}
+nextEdge(8, 10);
+nextEdge(5, 7);
