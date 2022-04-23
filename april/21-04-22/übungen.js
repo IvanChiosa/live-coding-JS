@@ -48,19 +48,6 @@ for (let i = 0; i < strToarr.length; i++) {
     console.log("mit split() ändert sich zu: ", strToarr[i]);
 }
 
-
-
-
-// für Montag
-// Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
-// for farther information check https://en.wikipedia.org/wiki/Zodiac
-// Examples:
-// zodiac("14-02-2002")  -> Aquarius
-// zodiac("10-06-1984")  -> Gemini
-
-
-
-
 const clothes = [
     { "name": "Mantel", "size": [44, 42, 40, 38], "price": 69 },
     { "name": "Jeans", "size": [44, 42,], "price": 59 },
@@ -74,7 +61,6 @@ for (let key in clothes) {
         console.log(clothes[key]);
     }
 }
-
 
 // für Montag
 // Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
@@ -101,26 +87,24 @@ function zodiacSign(day, month) {
             astro_sign = "aquarius";
         }     
     } else if (month == "february") {
-        if (day < 19)
+        if (day < 19) {
             astro_sign = "Aquarius";
-        else
+        } else {
             astro_sign = "pisces";
-    }
-
-    else if (month == "march") {
-        if (day < 21)
+        }     
+    } else if (month == "march") {
+        if (day < 21) {
             astro_sign = "Pisces";
-        else
+        } else {
             astro_sign = "aries";
-    }
-    else if (month == "april") {
-        if (day < 20)
+        }    
+    } else if (month == "april") {
+        if (day < 20) {
             astro_sign = "Aries";
-        else
+        } else {
             astro_sign = "taurus";
-    }
-
-    else if (month == "may") {
+        }    
+    } else if (month == "may") {
         if (day < 21)
             astro_sign = "Taurus";
         else
@@ -177,3 +161,23 @@ function zodiacSign(day, month) {
 // let day = 19;
 // let month = "may";
 console.log(zodiacSign(3, "december"));
+
+
+
+
+console.log("---------const Obj------");
+const objIvan = {
+    firstName: "Ivan",
+    lastName: "Chiosa",
+    age: 36,
+    auto: {
+        model: "Seat",
+        color: "Blue",
+    },
+    display: function () {
+        console.log(` Ich bin ${this.firstName + " " + this.lastName} ich bin ${this.age} meine auto is ${this.auto.model} die farbe ist ${this.auto.color}. Und bin ich glücklich`);
+    }
+}
+
+objIvan.display();
+console.log(objIvan.auto.model());
