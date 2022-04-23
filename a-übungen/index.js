@@ -778,4 +778,10 @@ function isEven(a) {
 console.log(isEven(5));
 console.log(isEven(2));
 
-
+console.log("----58----");
+function giveMeSomething(a) {
+	return console.log(`something ${a}`);
+}
+giveMeSomething("is better than nothing");
+giveMeSomething("Bob Jane");
+giveMeSomething("something");
