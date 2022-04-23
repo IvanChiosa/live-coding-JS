@@ -785,3 +785,57 @@ function giveMeSomething(a) {
 giveMeSomething("is better than nothing");
 giveMeSomething("Bob Jane");
 giveMeSomething("something");
+
+console.log("----59----");
+// Create a function that concatenates n input arrays, where n is variable.
+function concat (...args) {
+    let newConcat = [];
+    newConcat = newConcat.concat(...args);
+
+    return console.log(newConcat);
+}
+concat([1, 2, 3], [4, 5], [6, 7]);
+concat([1], [2], [3], [4], [5], [6], [7]);
+
+console.log("----60----");
+// There is a single operator in JavaScript, capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
+const remainder = (x, y) => {
+    return console.log(x % y);
+}
+remainder(1, 3);
+remainder(3, 4);
+remainder(-9, 45);
+remainder(5, 5);
+
+console.log("----61----");
+// Create a function which returns the number of true values there are in an array
+function countTrue (arr) {
+    let newCountTrue = 0;
+    for ( let i = 0; i < arr.length;i++) {
+        if (arr[i] === true) {
+            newCountTrue++;
+        }
+    }
+    return  console.log(newCountTrue); 
+}
+countTrue([true, false, false, true, false]);
+countTrue([false, false, false, false]);
+countTrue([]);
+
+console.log("----62----");
+const obj = {}; // empty obj i JavaScript
+const obj1 = new Object();
+console.log(typeof obj);
+
+const person = {
+    firstName: "Ivan",
+    lastName: "Chiosa",
+    display: () => {
+        age: 36;
+        cars: ["blue", "rote"];
+
+    }
+};
+console.log(person.display.age);
+
+
