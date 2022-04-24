@@ -211,3 +211,90 @@ console.log(Object.seal(obj));
 obj.firstN = "Nina";
 console.log(obj.firstN);
 console.log(Object.isSealed(obj));
+
+
+
+const nextEdge = (side1, side2) => {
+    return console.log(side1 + side2);
+}
+nextEdge(6,3);
+
+const nextEdge1 = (side1, side2) => {
+    return console.log(side1 * side2);
+}
+nextEdge1(8,9);
+
+const nextEdge2 = (side1, side2) => {
+    return console.log(side1 / side2);
+}
+nextEdge2(10,2);
+
+function nextEdge3 (side1, side2) {
+    return console.log(side1 % side2);
+}
+
+nextEdge3(50,6)
+
+const obj3 = {}
+obj3 ["name"] = "Ecaterina";
+console.log(obj3.name);
+obj3.name = "Maria";
+console.log(obj3.name);
+
+
+const ppl = [
+    { name: "Ivan", age: 30 },     // dass ist eie index (0) in eine Object
+    { name: "Mario", age: 25 },    // dass ist ein index (1)
+    { name: "Natalia", age: 30 },  // dass ist ein index (2)
+    { name: "Ivan", age: 30 },     // dass ist ein index (3)
+];
+console.log(ppl[1].name);  //OP1 zu sehen 
+console.log(ppl[1]["name"]); //OP2 zu sehen 
+
+
+
+console.log("---------");
+
+const object1 = {};
+
+Object.defineProperty(object1, 'property1', {
+  value: 42,
+  writable: true,
+});
+
+object1.property1 = 77;
+// throws an error in strict mode
+
+console.log(object1.property1);
+// expected output: 42
+
+
+const object2 = {};
+Object.defineProperty(object2, "name", {
+    value: 42,
+    writable: false,
+
+});
+object2.name = "Ivan";
+console.log(object2.name);
+
+
+//Object.defineProperty()
+const userInfoObj = {};
+Object.defineProperty(userInfoObj,"name", {
+    value: "Maria",
+    writable: true,
+});
+console.log(userInfoObj.name);
+
+// Object.defineProperties()
+Object.defineProperties(userInfoObj, {
+    lastName: {value:"Chiosa", writable: true},
+    act: {value: ["Cooking", "Biking"], writable: true },
+    cars: {value: ["V2"], writable: false},
+});
+console.log(userInfoObj.lastName, userInfoObj.act, userInfoObj.cars);
+
+// Object.hasOwnProperty()
+console.log(userInfoObj.hasOwnProperty("name"));
+console.log(userInfoObj.hasOwnProperty("age"));
