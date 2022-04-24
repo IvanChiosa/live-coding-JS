@@ -180,4 +180,34 @@ const objIvan = {
 }
 
 objIvan.display();
-console.log(objIvan.auto.model());
+console.log(objIvan.auto.model);
+
+
+
+
+console.log( "---------------");
+const obj = {
+    firstN: "Ivan",
+    lastN: "Chiosa",
+    auto: {
+        color: "blue",
+        model: "seat",
+    },
+    display: function () {
+        console.log(this.firstN, this.lastN);
+    }
+}
+obj.display();
+
+const obj1 = {};
+obj1 ["nameFather"] = "Mario";
+console.log(obj1);
+obj1.nameFather = "Vasilli";
+console.log(obj1.nameFather);
+console.log(Object.keys(obj1));
+console.log(Object.values(obj1.nameFather).join(""));
+
+console.log(Object.seal(obj));
+obj.firstN = "Nina";
+console.log(obj.firstN);
+console.log(Object.isSealed(obj));
