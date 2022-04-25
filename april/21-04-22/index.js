@@ -38,15 +38,15 @@ const objValues = Object.values(myData);
 console.log(objValues);
 
 
-// [] array oder eine bestimte buchstabe finden
+// [] array oder eine bestimmte buchstabe finden
 // () function aufrufen 
 // {}  => object oder scope 
 
 const ppl = [
-    { name: "Ivan", age: 30 },     // dass ist eien index (0) in eine Object
-    { name: "Mario", age: 25 },    // dass ist eien index (1)
-    { name: "Natalia", age: 30 },  // dass ist eien index (2)
-    { name: "Ivan", age: 30 },     // dass ist eien index (3)
+    { name: "Ivan", age: 30 },     // dass ist ein index (0) in eine Object
+    { name: "Mario", age: 25 },    // dass ist ein index (1)
+    { name: "Natalia", age: 30 },  // dass ist ein index (2)
+    { name: "Ivan", age: 30 },     // dass ist ein index (3)
 ];
 console.log(ppl[1].name);  //OP1 zu sehen 
 console.log(ppl[1]["name"]); //OP2 zu sehen 
@@ -63,7 +63,7 @@ console.log(userInfoObj.name);
 // Object.defineProperties()
 Object.defineProperties(userInfoObj, {
     lastName: {value:"Chiosa", writable: true},
-    act: {value: ["Cooking", "Biking"]},
+    act: {value: ["Cooking", "Biking"], writable: false },
     cars: {value: ["V2"], writable: false},
 });
 console.log(userInfoObj.lastName);
