@@ -8,7 +8,6 @@ const person = {
         console.log(`Hey ${this.firstName}`);
     }, // das ist eine methode
 };
-
 console.log("---------");
 // For in
 const names = ["Ivan", "Mario", "Olga", "Nancy"];
