@@ -1,57 +1,13 @@
-// The Recipe Card
-// Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).
-// On separate lines (one console.log statement for each), log the recipe information so it looks like:
-// Mole
-// Serves: 2
-// Ingredients:
-// cinnamon
-// cumin
-// cocoa
 
-const theRecipeCard = {
-    name: "Mole",
-    serves: "Serves: 2",
-    ingredients: ["Cinnamon", "cumin", "cacao"],
-    // print: function () {
-    //     console.log(`Die name ist ${this.name} und die serves ${serves} mit die ingredients: ${this.ingredients}`);
-    // }
-}
-console.log(Object.values(theRecipeCard));
-
-
-// The Reading List
-// Keep track of which books you read and which books you want to read!
-// Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
-// Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".
-// Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
-
-const theReadingList = {
-    
-}
-
-// Get Names. Create a function that takes an array of objects containing students' names e.g. {name: "John"}, and returns an array of just student names.
-// Example:
-// getNames([{ name: "Jane" },
-//        { name: "Jack" },
-//        { name: "John" }
-//    ])
-// ➞ ["Jane", "Jack", "John"]
-getNames = () => {
-    let names = ["Jane", "Jack", "John"];
-    console.log(Object.values(names));
-}
-getNames();
-
-console.log("---reduce------");
 // reduce 
 // old school
-const numbersArray = [3,5,8];
-let acc = 0;
-for (let i = 0; i <numbersArray.length; i++) {
+const numbersArray = [3, 5, 8];
+let box = 0;
+for (let i = 0; i < numbersArray.length; i++) {
     let cur = numbersArray[i];  // das ist eine referenze in JS // 
-    acc = acc + cur;
+    box = box + cur;
 }
-console.log(acc);
+console.log(box);
 
 
 // Have 4 toDos reduce ist eien callback und eine schlaiffe
@@ -59,36 +15,86 @@ console.log(acc);
 // 2. callBack
 // 3. loop
 // 4. box
+
 // prof
-const resultSum = numbersArray.reduce((acc,cur) => acc + cur);
+const resultSum = numbersArray.reduce((box, cur) => {
+    return box + cur;
+}, 0);
 console.log(resultSum);
 
 
 
 
 // Create a function that returns an object has following output, try this one in Advance array methods :muscolo::carnagione_2:
+
 // Examples:
 // ABC -> { A: 1, B: 1, C: 1 } QQQ -> { Q: 3}
-const countLetter = (str) => {
-    const arr = str.split(""); // convert da una arr in string 
-    const result = arr.reduce((box,cur) => {
+// tree -> { t: 1, r: 1, e: 2}
+// old school
+function countLetters(str) {
+    let resultObj = {};
+    for (let i = 0; i < str.length; i++) {
+        let currentChr = str[i];
+        if (resultObj.hasOwnProperty(currentChr)) {
+            resultObj[currentChr] += 1;
+        } else {
+            resultObj[currentChr] = 1;
+        }
+    }
+    return console.log(resultObj);
+}
+//countLetters("tree and sun");
 
-    },{}) // das ist eien leer object ich brauche für am ende wo du kann schpaichern
-};
-console.log(countLetter("Ivan"));
+// [] () {}
 
+// {} das ist eien leer object ich brauche für am ende wo du kann schpaichern
+// const arr = str.split(""); // convert da una arr in string
 
-// function countLetters(str) {
-//     let result = {};
-//     // arr = str.split("");
-//     for (let i = 0; i < str.length; i++) {
-//         let currentChr = str[i];
-//         if (result.hasOwnProperty(currentChr)) {
-//             result[currentChr] += 1;
-//         } else {
-//             result[currentChr] = 1;
-//         }
-//     }
-//     return console.log(result);;
+// // Op prof
+// box[cur] = box[cur] ? box[cur] + 1 : 1;
+// Op 2
+// box[cur] = box.hasOwnProperty(cur) ? box[cur] +1 : 1;
+// Op 3
+// if(box.hasOwnProperty(cur)){
+//   box[cur] += 1;
+// } else {
+//   box[cur] = 1;
 // }
-// countLetters("tree");
+// Op4
+// if (box[cur]) {
+//     box[cur] += 1;
+//   } else {
+//     box[cur] = 1;
+//   }
+//   return box;
+
+const countLetter = (str) =>
+    str.split("").reduce((box, cur) => {
+        box[cur] = box[cur] ? box[cur] + 1 : 1;
+        return box;
+    }, {});
+
+console.log(countLetter("tree"));
+
+// Scrabble. Write a program that, given an array of scrabble tiles, counts the maximum score that a player can earn from the tiles in their hand.
+// Example:
+// [ { tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ]
+const scrabble = [
+    { tile: "N", score: 1 },
+    { tile: "K", score: 5 },
+    { tile: "Z", score: 10 },
+    { tile: "X", score: 8 },
+    { tile: "D", score: 2 },
+    { tile: "A", score: 1 },
+    { tile: "E", score: 1 },
+];
+function sumOfTheScrabble(arr) {
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        result += arr[i].score;
+    }
+    return result;
+}
+console.log(sumOfTheScrabble(scrabble));
+const sumOfScore = (arr) => arr.reduce((result, cur) => result + cur.score, 0);
+console.log(sumOfScore(scrabble));
