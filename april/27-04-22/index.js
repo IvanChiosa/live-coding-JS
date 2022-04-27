@@ -146,7 +146,7 @@ console.log("--------05-----------");
 
 // * Examples:
 // ```javascript
-const sum = (arr) => arr.reduce((acc,cur) => acc + cur );
+const sum = (arr) => arr.reduce((acc,cur) => acc + cur, 0);
 console.log(sum([1,2,3,4,5])); // return 15
 console.log(sum([6,7,7])); //returns 20
  
@@ -156,5 +156,47 @@ console.log("--------06-----------");
 // #### 6. Square Root
 // * Given an array of numbers, find the square root of each element in the array.
 
-const calcHypotenuse = (a,b) => Math.sqrt((a * a) + (b * b));
-console.log(calcHypotenuse(5, 10));
+const calcHypotenuse = (arr) => arr.map((ele) => Math.sqrt(ele));
+console.log(calcHypotenuse([5, 10, 25, 100]));
+
+console.log("--------07-----------");
+
+
+// * @param {array} arr
+// * @param {any} value
+// * @return {number}
+// *
+// * @example
+// *    ['Ace', 10, true], 10    => 1
+// *    ['Array', 'Number', 'string'], 'Date'    => -1
+// *    [0, 1, 2, 3, 4, 5], 5    => 5
+// */
+// function findElement(arr, value) {
+//  return arr.indexOf(value);
+// }
+
+const findElement = (arr, value) => arr.indexOf(value);
+console.log(findElement(['Ace', 10, true], 10));
+
+
+console.log("--------08-----------");
+// OP 1
+
+const generateOdds = (num) =>  {
+    const arr = [];
+    for ( let i = 0; i < num; i++) {
+        arr.push(i * 2 + 1);
+    }
+    return arr;
+}
+console.log(generateOdds(5));
+
+console.log("--------09-----------");
+
+// OP 2
+const generateOdds1 = (num) => {
+    const arr = Array(num).fill(1).map((ele,i) => i * 2 + 1);
+
+    console.log(arr);
+}
+generateOdds1(5);
