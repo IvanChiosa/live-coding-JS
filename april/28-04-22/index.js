@@ -83,8 +83,73 @@ console.log(numArr.some((ele) => ele == 7)); // resultat true
 
 
 console.log("--- every----");
-// every  // ver
+// every  // vedi se tutti i ellementi sono uguali o no se non sono uguali da false se sono uguli e true 
 const numArr1 = [4,6,9,7,7];
 console.log(numArr1.every((ele) => ele == 7)); // resultat false
 
-// = == ===
+// = // variable //== verglecht // === value un d tipe 
+
+// let const var
+// var its ein immer ein globale variable 
+// const 
+
+//  if () {
+//     something true
+// } else {
+//     something false
+// }
+
+// &&  ||
+
+// for  ( for = 0; i < 10; i++) {
+    //}
+// ++ --
+// 
+
+// .length => (String  oder array)
+// string in java ist eine wort fur java ""
+// numer ist eine numer
+// bool true oder false 
+// Array []
+// Object {}  // eine supermarket in der supeem sind mehre regale und probuct // mehr info unber eine bestimte article
+const item = {
+    // title ist eine object
+    name: "iPhone", // die value ist properti
+    price: 1200,
+    model: "Pro Max",
+    memoryCard: 265,
+    app: ["Clock", "Facebook", "FaceTime", "Calendar"],
+    
+    abCountry: {
+        location: "Köln",
+        amount: 33,
+        sellOne: function() {
+            return this.amount--;
+        },
+        returnOne: function () {
+            return this.amount++;
+        },
+        callChina: function () {
+            return (this.amount += 100);
+        },
+    },
+    getInfo: function (){ // das ist eien methode 
+        console.log(`${this.name} sold in ${this.abCountry.location} will cost you ${this.price} €`
+        );
+    },
+    printData: () => console.log("This is a cool function"),
+};
+// item.abCountry.sellOne();
+// item.abCountry.sellOne();
+// console.log(item);
+// item.getInfo();
+// console.log(item.app);
+
+// opt 1
+console.log(item.abCountry.location);
+// opt 2
+// console.log(["item"]["abCountry"]);
+
+console.log(item.abCountry.sellOne());
+console.log(item.abCountry.returnOne());
+console.log(item.abCountry.callChina());
