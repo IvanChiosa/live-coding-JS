@@ -72,6 +72,8 @@ const result6 = myNumbers5.map((element) => {
 console.log(result6);
 console.log(myNumbers5);
 
+
+console.log("-----04----");
 // sort ()
 const footballers1 = [
     {firstName: "Gerd", lastName: "Müller", goals: 365},
@@ -80,8 +82,22 @@ const footballers1 = [
     {firstName: "Franz", lastName: "Backenbauer", goals: 44},
 ];
 
-const result7 = footballers1.sort((a,b) => {
-
+const result7 = footballers1.sort((a,b) => { // sortiert vom kleine zu große
+    let localVar = 5;
+    let test = localVar * 3;
     return a.goals > b.goals ? 1 : -1;
 });
 console.log(result7);
+
+
+const myNumbers6 = [2,5,8,13,7];
+let sum = 0;
+for (let i = 0; i < myNumbers6.length;i++) {
+    sum += myNumbers6[i];
+}
+console.log(sum);
+
+const sum2 = myNumbers6.reduce((acc, cur) => {
+   return acc + cur;
+}, 0);
+console.log(sum2);
