@@ -15,6 +15,14 @@ for (const prop in personObj) { // prop => ist property oder key
     console.log(`${prop} : ${personObj[prop]}`);
 };
 
+const personObj1 = {
+    firstName: "Chiosa",
+    age: 42,
+};
+for (const property in personObj1) {
+    console.log(`${property} : ${personObj1[property]}`);
+}
+
 
 console.log("--- for of----");
 const namesArr = ["mario", "Ecaterina", "Olga", "Steel"];
