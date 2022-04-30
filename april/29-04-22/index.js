@@ -73,7 +73,7 @@ console.log(result6);
 console.log(myNumbers5);
 
 
-console.log("-----04----");
+console.log("-----05----");
 // sort ()
 const footballers1 = [
     {firstName: "Gerd", lastName: "Müller", goals: 365},
