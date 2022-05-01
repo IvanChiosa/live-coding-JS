@@ -62,7 +62,6 @@ const num = [1,2,3,4,4,5,5,] ;
 const numberFind = num.find((ele) => ele == 5);
 console.log(numberFind);
 
-// 
 
 const numbers = [1,1,1,1,2,2,];
 const findNumResult = numbers.find((ele) => ele == 2);
@@ -88,3 +87,8 @@ console.log(num1.some((ele) => ele == 6));
 console.log("--- every----");
 const numArr1 = [6,6,6];
 console.log(numArr1.every((ele) => ele == 6));
+
+// map ()
+const myNumbers5 = [2,5,8,13,7];
+const result6 = myNumbers5.map((element) => element * 3);
+console.log(result6);
