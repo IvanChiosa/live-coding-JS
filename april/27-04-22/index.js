@@ -1,6 +1,7 @@
 const emojis = ["😉", "😉", "😉", "😉", "😎", "😎", "🤓"];
 const discounts =  [22,3,45,6];
 
+console.log("-----map()-----");
 // map  /// gib uns eine kopie of meine array immer array in return gib! // wir kann unsere object manipuliren 
 // Have 4 toDos
 // 1. method
@@ -13,6 +14,13 @@ const emojiCopy = emojis.map((emoji,index) => {
     return `Hallo ${emoji} ${index + 1}`;
 });
 console.log(emojiCopy);
+
+const emojis1 = ["😉", "😉", "😉", "😉", "😎", "😎", "🤓"];
+
+const emojiCopy1 = emojis1.map((emojis) => {
+    return console.log(`Ivan's emojis ${emojis}`);
+});
+(emojiCopy1);
 //                                  für eine paramiter brauchst du keine  runde klammern (ele) => ele  // zweite parameter immer index 
 const copyDiscounts = discounts.map((ele) => (ele * 1.1) / 100);
 console.log(copyDiscounts);
@@ -51,6 +59,20 @@ const jobs = [
 ];
 const filteredJob = jobs.filter((job) => job.salary > 2000 || job.location == "Amsterdam" || job.remote == false);
 console.log(filteredJob);
+
+
+console.log("------- Opt2 ----");
+// Opt 2
+const job1 = [
+    { title: "teacher", salary: 1500, location: "Amsterdam", remote: true},
+    { title: "IT", salary: 2400, location: "La", remote: true},
+    { title: "Web Developer", salary: 1500, location: "London", remote: false},
+];
+const filterJob1 = job1.filter((job) => job.salary > 1000 && job.location == "London");
+console.log(filterJob1);
+console.log("------");
+const filterJob2 = job1.filter((job) => job.title);
+console.log(filterJob2);
 
 // reduce
 const itemsList = [ {title: "Qual lock", price: 80 }, 
