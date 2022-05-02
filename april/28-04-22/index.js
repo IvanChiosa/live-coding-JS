@@ -95,7 +95,7 @@ console.log("--- every----");
 const numArr1 = [4,6,9,7,7];
 console.log(numArr1.every((ele) => ele == 7)); // resultat false
 
-// = // variable //== verglecht // === value un d tipe 
+// =variable // ==vergleicht // ===value und type
 
 // let const var
 // var its ein immer ein globale variable 

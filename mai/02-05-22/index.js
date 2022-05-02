@@ -53,15 +53,15 @@ if ( totalItems > 150 ) {
 }
 
 console.log("---break---");
-// loops // break || continue
+// loops // break 
+// break wir benutzen nur in der schlaife oder swith
 for (let i = 0; i < 10; i++) {
     console.log(i);
     if ( i == 5 ) {
         break;
     } 
 }
-
-
+// || continue
 console.log("---continue---");
 for (let i = 0; i < 10; i++) {
     if ( i == 5 ) {
@@ -70,5 +70,4 @@ for (let i = 0; i < 10; i++) {
     console.log(i);
 }
 
-// strings 
 // if else
