@@ -3,6 +3,7 @@ console.log("-----1-----");
 // console.log(humanize(1)); //"1st"
 // console.log(humanize(20)); //"20th"
 // console.log(humanize(302)); //"302nd"
+// Opt 1
 function humanize(number) {
 
     if (number % 100 >= 11 && number % 100 <= 13)
@@ -18,6 +19,24 @@ console.log(humanize(1));
 console.log(humanize(20));
 console.log(humanize(302));
 
+console.log("---------");
+// Opt 2
+const humanize1 = (num) => {
+    let addedText;
+    if (num % 10 == 1) {
+        addedText = "st";
+    } else if (num % 10 == 2) {
+        addedText = "nt";
+    } else if (num % 10 == 3) {
+        addedText = "rd";
+    } else {
+        addedText = "th";
+    }
+    return console.log(`${num} ${addedText}`);
+};
+humanize1(22);
+humanize1(1);
+humanize1(302);
 
 console.log("-----2-----");
 // Write a JavaScript function to alphabetize a given string.
@@ -43,10 +62,8 @@ var library = [
     { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
     { author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245 },
 ];
-const toSortTitle = (str) => {
-    console.log(str.library);
-}
-console.log(library.sort(toSortTitle));
+const sorted = (arr) => arr.sort((a, b) => (a.title > b.title ? 1 : -1));
+console.table(sorted(library));
 
 // Opt 2
 console.log("-----4-----");
@@ -84,6 +101,7 @@ console.log("-----5-----");
 //   Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
 // console.log(num_string_range("a", "z", 2));
 // // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+// Option 1
 function num_string_range(start, end, step) {
     var range = [];
     if ((step === 0) || (typeof start == "undefined" || typeof end == "undefined") || (typeof start != typeof end))
@@ -130,6 +148,16 @@ console.log(num_string_range(0, -5, 1));
 console.log(num_string_range(0, 25, 5));
 console.log(num_string_range(20, 5, 5));
 
+// opt 2
+const numStringRange = (start, end, steps) => {
+    let resultArr = [];
+    for (let i = start.charCodeAt(0); i < end.charCodeAt(0);) {
+        resultArr.push(String.fromCharCode(i));
+        i += steps;
+    }
+    return console.table(resultArr);
+};
+numStringRange("a", "z", 1);
 
 console.log("-----6-----");
 // Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
@@ -156,100 +184,93 @@ data = [
     { signName: "Not real day!", from: "1232" },
 ];
 
-function zodiac_sign(day, month) {
-    let astro_sign = "";
+function zodiacSign(day, month) {
+    let astroSign = "";
 
     // checks month and date within the
     // valid range of a specified zodiac
     if (month == "december") {
 
         if (day < 22)
-            astro_sign = "Sagittarius";
+            astroSign = "Sagittarius";
         else
-            astro_sign = "capricorn";
+            astroSign = "capricorn";
     }
 
     else if (month == "january") {
         if (day < 20)
-            astro_sign = "Capricorn";
+            astroSign = "Capricorn";
         else
-            astro_sign = "aquarius";
+            astroSign = "aquarius";
     }
-
     else if (month == "february") {
         if (day < 19)
-            astro_sign = "Aquarius";
+            astroSign = "Aquarius";
         else
-            astro_sign = "pisces";
+            astroSign = "pisces";
     }
-
     else if (month == "march") {
         if (day < 21)
             astro_sign = "Pisces";
         else
-            astro_sign = "aries";
+            astroSign = "aries";
     }
     else if (month == "april") {
         if (day < 20)
-            astro_sign = "Aries";
+            astroSign = "Aries";
         else
-            astro_sign = "taurus";
+            astroSign = "taurus";
     }
-
     else if (month == "may") {
         if (day < 21)
-            astro_sign = "Taurus";
+            astroSign = "Taurus";
         else
-            astro_sign = "gemini";
+            astroSign = "gemini";
     }
-
     else if (month == "june") {
         if (day < 21)
-            astro_sign = "Gemini";
+            astroSign = "Gemini";
         else
-            astro_sign = "cancer";
+            astroSign = "cancer";
     }
-
     else if (month == "july") {
         if (day < 23)
-            astro_sign = "Cancer";
+            astroSign = "Cancer";
         else
-            astro_sign = "leo";
+            astroSign = "leo";
     }
-
     else if (month == "august") {
         if (day < 23)
-            astro_sign = "Leo";
+            astroSign = "Leo";
         else
-            astro_sign = "virgo";
+            astroSign = "virgo";
     }
-
     else if (month == "september") {
         if (day < 23)
-            astro_sign = "Virgo";
+            astroSign = "Virgo";
         else
-            astro_sign = "libra";
+            astroSign = "libra";
     }
 
     else if (month == "october") {
         if (day < 23)
-            astro_sign = "Libra";
+            astroSign = "Libra";
         else
-            astro_sign = "scorpio";
+            astroSign = "scorpio";
     }
 
     else if (month == "november") {
         if (day < 22)
-            astro_sign = "scorpio";
+            astroSign = "scorpio";
         else
-            astro_sign = "sagittarius";
+            astroSign = "sagittarius";
     }
 
-    console.log((astro_sign));
+    console.log((astroSign));
 }
 
 // Driver Code
 
 // let day = 19;
 // let month = "may";
-zodiac_sign(30, "may");
+zodiacSign(9, "may");

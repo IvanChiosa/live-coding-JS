@@ -70,4 +70,23 @@ for (let i = 0; i < 10; i++) {
     console.log(i);
 }
 
-// if else
+// switch
+let color = "Green";
+let resultText = "";
+switch(color) {
+    case ("blue", "lightBlue"): 
+    resultText = "This is blue";
+        break;
+    case "Green":
+        resultText ="This is green";
+        break;
+    case "black": 
+    resultText ="This is black";
+        break;
+    case "red": 
+    resultText ="This is red";
+        break;
+    default:
+        resultText = "Sorry this color is not in our list";
+}
+console.log(resultText);

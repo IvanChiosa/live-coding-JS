@@ -6,16 +6,16 @@ console.log("-----01-----");
 // Copy and paste these variables into your JavaScript file. In the commented section, write down which type you think each variable is. Check your answers by printing the types to the console.
 // let length = 16.78; // let lastName = "Johnson"; // let car = ""; // let isOpen = true; //
 let length = 16.78;
-console.log(`${length} => This is ein Number`);
+console.log(typeof length);
 
 let lastName = "Johnson";
-console.log(`${lastName} => This is one String`);
+console.log(typeof lastName);
 
 let car = "";
-console.log(`${car} => This is ein Null`);
+console.log(typeof car);
 
 let isOpen = true;
-console.log(`${isOpen} => This is ein Boolean`);
+console.log(typeof isOpen);
 
 
 console.log("-----02-----");
@@ -37,7 +37,7 @@ if (ageJohn > ageMark) {
 
 console.log("-----04-----");
 // Declare a variable called "str". Do not assign a value. Print str's data type to the console.
-let str = "";
+let str;
 console.log(str);
 
 
@@ -87,7 +87,7 @@ console.log("-----11-----");
 // Declare a variable. Assign the variable the value of a number or a string. Use the isNaN() method to check whether the variable is a number or not. Print "variable is NOT a number: true/false".
 // Print the data type of isNaN(variable) to the console.
 
-let typeOfNaN = "Mario";
+let typeOfNaN = 10;
 if (isNaN(typeOfNaN)) {
     console.log("variable is NOT a number: false");
 } else {
