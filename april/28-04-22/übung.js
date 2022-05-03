@@ -268,9 +268,6 @@ function zodiacSign(day, month) {
 
     console.log((astroSign));
 }
-
-// Driver Code
-
 // let day = 19;
 // let month = "may";
 zodiacSign(9, "may");
