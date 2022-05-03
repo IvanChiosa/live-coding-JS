@@ -41,7 +41,7 @@ const arr = []; // array zu declariert
 const arr2 = new Array(); // array zu declariert // mit new wir macchen ein kopie mit dem classe 
 // sort, map, join, includes, foreach, fill, filter, slice, reduce, splice, push, pop, unshift, shift, findIndexOf, reverce
 
-console.log(Object.getOwnPropertyNames(Array.prototype));  //gibt uns die alle method was gibt in ein array
+console.log(Object.getOwnPropertyNames(Array.prototype));  //gibts uns alles method und property was gibts in eine array
 // [
 //     'length',      'constructor',    'concat',
 //     'copyWithin',  'fill',           'find',
@@ -61,10 +61,10 @@ console.log(Object.getOwnPropertyNames(Array));
 // [ 'length', 'name', 'prototype', 'isArray', 'from', 'of' ] // 
 
 console.log(Object.getOwnPropertyNames(Function));
-// [ 'length', 'name', 'prototype', 'isArray', 'from', 'of' ] // 
+// [ 'length', 'name', 'prototype' ] // 
 
 
-console.log(Object.getOwnPropertyNames(Array.prototype).filter((prop) => typeof Array.prototype[prop]  == "function"));
+console.log(Object.getOwnPropertyNames(Array.prototype).filter((prop) => typeof Array.prototype[prop] == "function")); // hier ist die method
 
 // [
 //     'constructor',    'concat',   'copyWithin',
@@ -79,3 +79,4 @@ console.log(Object.getOwnPropertyNames(Array.prototype).filter((prop) => typeof 
 //     'some',           'reduce',   'reduceRight',
 //     'toLocaleString', 'toString', 'at'
 //   ]
+console.log(typeof function sum(){});
