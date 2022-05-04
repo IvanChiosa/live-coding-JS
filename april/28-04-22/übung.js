@@ -102,7 +102,7 @@ console.log("-----5-----");
 // console.log(num_string_range("a", "z", 2));
 // // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 // Option 1
-function num_string_range(start, end, step) {
+function numStringRange(start, end, step) {
     var range = [];
     if ((step === 0) || (typeof start == "undefined" || typeof end == "undefined") || (typeof start != typeof end))
         return false;
@@ -142,11 +142,11 @@ function num_string_range(start, end, step) {
 
 }
 
-console.log(num_string_range('a', "z", 2));
-console.log(num_string_range("Z", "A", 2));
-console.log(num_string_range(0, -5, 1));
-console.log(num_string_range(0, 25, 5));
-console.log(num_string_range(20, 5, 5));
+console.log(numStringRange('a', "z", 2));
+console.log(numStringRange("Z", "A", 2));
+console.log(numStringRange(0, -5, 1));
+console.log(numStringRange(0, 25, 5));
+console.log(numStringRange(20, 5, 5));
 
 // opt 2
 const numStringRange = (start, end, steps) => {
@@ -190,7 +190,6 @@ function zodiacSign(day, month) {
     // checks month and date within the
     // valid range of a specified zodiac
     if (month == "december") {
-
         if (day < 22)
             astroSign = "Sagittarius";
         else
@@ -203,48 +202,56 @@ function zodiacSign(day, month) {
         else
             astroSign = "aquarius";
     }
+
     else if (month == "february") {
         if (day < 19)
             astroSign = "Aquarius";
         else
             astroSign = "pisces";
     }
+
     else if (month == "march") {
         if (day < 21)
             astro_sign = "Pisces";
         else
             astroSign = "aries";
     }
+
     else if (month == "april") {
         if (day < 20)
             astroSign = "Aries";
         else
             astroSign = "taurus";
     }
+
     else if (month == "may") {
         if (day < 21)
             astroSign = "Taurus";
         else
             astroSign = "gemini";
     }
+
     else if (month == "june") {
         if (day < 21)
             astroSign = "Gemini";
         else
             astroSign = "cancer";
     }
+
     else if (month == "july") {
         if (day < 23)
             astroSign = "Cancer";
         else
             astroSign = "leo";
     }
+
     else if (month == "august") {
         if (day < 23)
             astroSign = "Leo";
         else
             astroSign = "virgo";
     }
+
     else if (month == "september") {
         if (day < 23)
             astroSign = "Virgo";
