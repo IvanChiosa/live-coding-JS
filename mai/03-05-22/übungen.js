@@ -77,9 +77,6 @@ for ( let i = 0; i <books.length; i++) {
 // }
 
 
-
-console.log("-----03-----");
-
 // // Write a function that converts hours into seconds.
 
 // // Examples
@@ -88,17 +85,11 @@ console.log("-----03-----");
 // // howManySeconds(10) ➞ 36000
 
 // // howManySeconds(24) ➞ 86400
+const howManySeconds = (hour) => hour * 3600;
+console.log(howManySeconds(2));
+console.log(howManySeconds(10));
+console.log(howManySeconds(24));
 
-function howManySeconds (num) {
-    return console.log(num * 3600);
-}
-howManySeconds(2);
-howManySeconds(10);
-howManySeconds(24);
-
-
-
-console.log("-----04-----");
 // Write a function that returns the string "something" joined with a space " " and the given argument a.
 
 // Examples
@@ -107,17 +98,11 @@ console.log("-----04-----");
 // giveMeSomething("Bob Jane") ➞ "something Bob Jane"
 
 // giveMeSomething("something") ➞ "something something"
+const giveMeSomething = (str) => `something ${str}`;
+console.log(giveMeSomething("Bob Jane"));
+console.log(giveMeSomething("is better than nothing"));
+console.log(giveMeSomething("something"));
 
-function giveMeSomething  (str) {
-    return console.log(`Something ${str}`);
-}
-giveMeSomething("is better than nothing");
-giveMeSomething("Bob Jane");
-giveMeSomething("something");
-
-
-
-console.log("-----05-----");
 // Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
 
 // Examples
@@ -128,19 +113,15 @@ console.log("-----05-----");
 // // 83 + 34 = 117
 
 // lessThan100(3, 77) ➞ true
-function lessThan100 (num1, num2) {
-    if (num1 + num2 < 100) {
-        return true;
-    } else {
-        return false;
-    }
+
+// const lessThan100 = (val1, val2) => val1 + val2 < 100;
+function lessThan100(num1, num2) {
+  return num1 + num2 < 100;
 }
-console.log(lessThan100(22,15));
-console.log(lessThan100(83,34));
+console.log(lessThan100(22, 15));
+console.log(lessThan100(3, 77));
+console.log(lessThan100(83, 34));
 
-
-
-console.log("-----06-----");
 // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
 
 // Examples
@@ -149,16 +130,10 @@ console.log("-----06-----");
 // addition(9) ➞ 10
 
 // addition(-3) ➞ -2
+const addition = (num) => num + 1;
+console.log(addition(0));
+console.log(addition(-3));
 
-function addition (num) {
-    return console.log(num + 1);
-}
-addition(0);
-addition(9);
-addition(-3);
-
-
-console.log("-----07-----");
 // Create a function that takes the age in years and returns the age in days.
 
 // Examples
@@ -166,26 +141,6 @@ console.log("-----07-----");
 
 // calcAge(0) ➞ 0
 
-// calcAge(20) ➞ 7300
-
-function calcAge (age) {
-    return age * 365;
-}
-console.log(calcAge(65));
-console.log(calcAge(0));
-console.log(calcAge(20));
-
-// Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialised with the attributes name and age, return a sentence in the following format:
-
-// {other person name} is {older than / younger than / the same age as} me.
-
-// Examples
-// p1 = Person("Samuel", 24)
-// p2 = Person("Joel", 36)
-// p3 = Person("Lily", 24)
-// p1.compareAge(p2) ➞ "Joel is older than me."
-
-// p2.compareAge(p1) ➞ "Samuel is younger than me."
-
-// p1.compareAge(p3) ➞ "Lily is the same age as me."
-
+// calcAge(32) ➞
+const calcAge = (age) => age * 365.25;
+console.log(calcAge(32));
