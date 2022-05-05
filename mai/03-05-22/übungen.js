@@ -134,6 +134,8 @@ const addition = (num) => num + 1;
 console.log(addition(0));
 console.log(addition(-3));
 
+
+// console.log("-----Ivan's Jahre in der tag-----");
 // Create a function that takes the age in years and returns the age in days.
 
 // Examples
@@ -142,5 +144,7 @@ console.log(addition(-3));
 // calcAge(0) ➞ 0
 
 // calcAge(32) ➞
+
+console.log("-----Ivan's und Sebastian Jahre in der tag-----");
 const calcAge = (age) => age * 365.25;
-console.log(calcAge(32));
+console.log(calcAge(36));
