@@ -49,19 +49,61 @@ console.log(numberSplit(-9));
 
 // sortByLength(["a", "ccc", "dddd", "bb"]);
 
-// let array = [`ab`, `abcdefgh`, `abcd`];
-// let newArray = array.sort((a,b) => {
-//     return b.length - a.length
-// })
-// console.log(newArray);
+let array = 
+[`ab`, `abcdefgh`, `abcd`];
 
-const sortByLength = (a,b) => {
-    let arr = [];
-    arr.sort((a,b) => { 
-        return arr;
-        
-    });
+
+let newArray = array.sort((a,b) => {
+    return a.length - b.length;
+});
+console.log(newArray);
+
+console.log("--------");
+const array1 = ['a', 'b', 'c', 'd', 'e'];
+console.log(array1.copyWithin(2));
+
+
+console.log("--------");
+// Given two arguments, return an array which contains these two arguments.
+
+// Examples
+// makePair(1, 2) ➞ [1, 2]
+
+// makePair(51, 21) ➞ [51, 21]
+
+// makePair(512124, 215) ➞ [512124, 215]
+// Notes
+// N/A
+
+const makePair = (num1, num2) => { 
+    return [num1,num2];
 };
-console.log(sortByLength([ "ccc", "a","dddd", "bb"]));
-console.log(sortByLength([ "ccc", "a","dddd", "bb"]));
-console.log(sortByLength(["apple", "pie", "shortcake"]));
+
+console.log(makePair(1,2));
+console.log(makePair("lol",2))
+console.log(makePair(1,null))
+console.log(makePair(1,[7,8,9]))
+console.log(makePair(1,0))
+
+console.log("--------");
+
+// Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
+
+// Examples
+// getVoteCount({ upvotes: 13, downvotes: 0 }) ➞ 13
+
+// getVoteCount({ upvotes: 2, downvotes: 33 }) ➞ -31
+
+// getVoteCount({ upvotes: 132, downvotes: 132 }) ➞ 0
+// Notes
+// You can expect only positive integers for vote counts.
+
+const getVoteCount = ({upvotes, downvotes}) => {
+    return upvotes - downvotes;
+}
+
+console.log(getVoteCount({ upvotes: 13, downvotes: 0 }));
+
+console.log(getVoteCount({ upvotes: 2, downvotes: 33 }));
+
+console.log(getVoteCount({ upvotes: 132, downvotes: 132 }));
