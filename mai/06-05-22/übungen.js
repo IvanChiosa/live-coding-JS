@@ -107,3 +107,61 @@ console.log(getVoteCount({ upvotes: 13, downvotes: 0 }));
 console.log(getVoteCount({ upvotes: 2, downvotes: 33 }));
 
 console.log(getVoteCount({ upvotes: 132, downvotes: 132 }));
+
+
+// Write a function to reverse an array.
+
+// Examples
+// reverse([1, 2, 3, 4]) ➞ [4, 3, 2, 1]
+
+// reverse([9, 9, 2, 3, 4]) ➞ [4, 3, 2, 9, 9]
+
+// reverse([]) ➞ []
+// Notes
+// Don't forget to return the result.
+// If you get stuck on a challenge, find help in the Resources tab.
+// If you're really stuck, unlock solutions in the Solutions tab.
+
+const reverse =(num) => {
+    return num.reverse();
+}
+console.log(reverse([1, 2, 3, 4]));
+console.log(reverse([9, 9, 2, 3, 4]));
+console.log(reverse([]));
+
+
+// Help fix all the bugs in the function incrementItems! It is intended to add 1 to every element in the array!
+
+// Examples
+// incrementItems([0, 1, 2, 3]) ➞ [1, 2, 3, 4]
+
+// incrementItems([2, 4, 6, 8]) ➞ [3, 5, 7, 9]
+
+// incrementItems([-1, -2, -3, -4]) ➞ [0, -1, -2, -3]
+// Notes
+// Make sure to read every line carefully.
+
+console.log("---increments----");
+const incrementItems = (arr) => arr.map(num => num + 1);
+console.log(incrementItems([0, 1, 2, 3]));
+console.log(incrementItems([2, 4, 6, 8]));
+console.log(incrementItems([-1, -2, -3, -4]));
+
+// You can assign variables from arrays like this:
+
+// const arr = [1, 2, 3, 4, 5, 6]
+// let a = arr[0]
+// let b = arr[1]
+
+// console.log(a) // outputs 1
+// console.log(b) // outputs 2
+// With ES6, you can assign variables from arrays in a much more succinct way. Create variables a and b from the given array using the ES6 destructuring assignment syntax, where a === 1 and b === 2.
+
+// Notes
+// Check the Resources tab for examples.
+
+const arr = [1,2,3,4,5,6];
+let a = arr[0];
+let b = arr[1];
+console.log(a);
+console.log(b);
