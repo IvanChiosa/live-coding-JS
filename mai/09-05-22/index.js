@@ -117,3 +117,28 @@ const moneyFunction = ((currentAge, retirementAge, monthlyWage, percentage) => {
     );
   }
 })(40, 60, 1000, 10);
+// () // ruft sie selber 
+// () ()
+
+console.log("----Bank Account-----");
+// Write a function that checks if a user give a correct German bank account
+// Example:
+// DE3333 -> this is not a complete bank account please check
+// QQ -> this is not a bank account
+// DE33nn54637 -> this is a wrong bank account
+// DE -> this is correct, I'll take your money :faccia_leggermente_sorridente:
+
+function bankAccount (str) {
+    if(str.startsWith("DE") && str.length === 22) {
+        return `This is correct, I'll take your money => ${str}`;
+    } else if (str === "DE3333") {
+        return `This is not a complete bank account please check`;
+    } else if (str  === "QQ") {
+        return `This is not a bank account`;
+    } else if (str === "DE33nn54637")  {
+        return `This is a wrong bank account`
+    } else {
+        return `Write here you Iban`
+    }
+}
+console.log(bankAccount("DE12345678901234567890"));
