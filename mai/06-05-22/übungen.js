@@ -160,8 +160,25 @@ console.log(incrementItems([-1, -2, -3, -4]));
 // Notes
 // Check the Resources tab for examples.
 
-const arr = [1,2,3,4,5,6];
-let a = arr[0];
-let b = arr[1];
+const arr = [8,2,3,4,5,6];
+let a = arr[0] === 1;
+let b = arr[1] === 2;
 console.log(a);
 console.log(b);
+
+
+// Create a function that accepts an array and returns the last item in the array.
+
+// Examples
+// getLastItem([1, 2, 3]) ➞ 3
+
+// getLastItem(["cat", "dog", "duck"]) ➞ "duck"
+
+// getLastItem([true, false, true]) ➞ true
+// Notes
+// Don't forget to return the result.
+// If you get stuck on a challenge, find help in the Resources tab.
+// If you're really stuck, unlock solutions in the Solutions tab.
+
+const getLastItem = (arr) => arr.indexOf();
+console.log(getLastItem([1, 2, 3]));
