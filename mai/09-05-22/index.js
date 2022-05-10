@@ -154,28 +154,7 @@ const bankContoCheck = (str) => {
   console.log(bankContoCheck("DE2222234354883nn85096"));
   console.log(bankContoCheck("DE5096"));
   console.log(bankContoCheck("DE22222343548839385096"));
-  // Miserable Parody of a Calculator
-  // Create a function that will handle simple math expressions. The input is an expression in the form of a string.
-  // Examples
-  // calculator("23+4") ➞ 27
-  // calculator("45-15") ➞ 30
-  // calculator("13+2-5*2") ➞ 5
-  // calculator("49/7*2-3") ➞ 11
   
-  const calculator = (str) => {
-      return 
-  }
-
-
-
-
-  // Visa oer Master, write a function that checks if the user has entered a valid card data
-  // Example:
-  // 412178679036597 -> this is Visa card, I need your money
-  // 512178679036597 -> this is Master card, I need your money
-  // 34121786790365 -> this is AmEpx card, I need your money
-  // 11111 -> this is not correct
-  // de343ee -> this is not correct
   
   // Phone number, Write a function that checks if a user give a correct German (landline Berlin 030) phone number
   // 030-1247893 -> I'll call now
