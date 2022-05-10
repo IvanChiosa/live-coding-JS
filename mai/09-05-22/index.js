@@ -162,6 +162,13 @@ const bankContoCheck = (str) => {
   // calculator("13+2-5*2") ➞ 5
   // calculator("49/7*2-3") ➞ 11
   
+  const calculator = (str) => {
+      return 
+  }
+
+
+
+
   // Visa oer Master, write a function that checks if the user has entered a valid card data
   // Example:
   // 412178679036597 -> this is Visa card, I need your money
