@@ -1,9 +1,10 @@
 // declarieren die strict mode 
 "use strict";
-// SIAF && IIFE
+// SIAF  Self Invoked Anonymous Functions
+// IIFE  Immediately Invoked Function Expression
 
 // local vs global
-// global 0> gehöer insgesamt var
+// global =>  gehört insgesamt var
 // let x = 3;
 // scoop schlaife if/else, switch, calback 
 
@@ -41,7 +42,7 @@ console.log(outerFunction());
 
 // closure in inglish ist closser 
 // closure 
-let num = 10;
+// let num = 10;
 function fun() {
     let num = 10;
 
@@ -64,6 +65,12 @@ noName();
 (function () {
     console.log("Ivan");
 })();
+
+(function() {
+
+})();
+
+
 
 // 2 beispiel
 (function (name,add) {
@@ -121,24 +128,49 @@ const moneyFunction = ((currentAge, retirementAge, monthlyWage, percentage) => {
 // () ()
 
 console.log("----Bank Account-----");
-// Write a function that checks if a user give a correct German bank account
+/// Write a function that checks if a user give a correct German bank account
 // Example:
 // DE3333 -> this is not a complete bank account please check
 // QQ -> this is not a bank account
 // DE33nn54637 -> this is a wrong bank account
-// DE -> this is correct, I'll take your money :faccia_leggermente_sorridente:
+// DE22222343548839385096 -> this is correct, I'll take your money :)
+// bankContoCheck("DE3333");
 
-function bankAccount (str) {
-    if(str.startsWith("DE") && str.length === 22) {
-        return `This is correct, I'll take your money => ${str}`;
-    } else if (str === "DE3333") {
-        return `This is not a complete bank account please check`;
-    } else if (str  === "QQ") {
-        return `This is not a bank account`;
-    } else if (str === "DE33nn54637")  {
-        return `This is a wrong bank account`
-    } else {
-        return `Write here you Iban`
+const bankContoCheck = (str) => {
+    let countrySym = str.substring(0, 2);
+    let accNumbers = str.substring(2);
+    let userAccLength = str.length;
+    if (countrySym != "DE") {
+      return "this is not a bank account";
     }
-}
-console.log(bankAccount("DE12345678901234567890"));
+    if (userAccLength != 22) {
+      return "this is not a complete bank account please check";
+    }
+    if (isNaN(accNumbers)) {
+      return "this is a wrong bank account";
+    }
+    return "this is correct, I'll take your money :)";
+  };
+  console.log(bankContoCheck("DE2222234354883nn85096"));
+  console.log(bankContoCheck("DE5096"));
+  console.log(bankContoCheck("DE22222343548839385096"));
+  // Miserable Parody of a Calculator
+  // Create a function that will handle simple math expressions. The input is an expression in the form of a string.
+  // Examples
+  // calculator("23+4") ➞ 27
+  // calculator("45-15") ➞ 30
+  // calculator("13+2-5*2") ➞ 5
+  // calculator("49/7*2-3") ➞ 11
+  
+  // Visa oer Master, write a function that checks if the user has entered a valid card data
+  // Example:
+  // 412178679036597 -> this is Visa card, I need your money
+  // 512178679036597 -> this is Master card, I need your money
+  // 34121786790365 -> this is AmEpx card, I need your money
+  // 11111 -> this is not correct
+  // de343ee -> this is not correct
+  
+  // Phone number, Write a function that checks if a user give a correct German (landline Berlin 030) phone number
+  // 030-1247893 -> I'll call now
+  // 333-332222 -> this is not a phone number
+  // 030-33 -> This is not complete !
