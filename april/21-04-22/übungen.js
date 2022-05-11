@@ -62,106 +62,52 @@ for (let key in clothes) {
     }
 }
 
-// für Montag
 // Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
 // for farther information check https://en.wikipedia.org/wiki/Zodiac
 // Examples:
 // zodiac("14-02-2002")  -> Aquarius
 // zodiac("10-06-1984")  -> Gemini
+const zodiac = (str) => {
+    let arr = str.split("-");
+    console.log(arr);
+    const result = {
+        birthDay: arr[0],
+        birthMonth: arr[1],
+        birthYear: arr[2],
+        yourZodiac: function () {
+            let monthDay = this.birthMonth + this.birthDay;
+            console.log(monthDay);
+            let i = 0;
+            while (monthDay >= data[i].from && i < data.length) {
+                i++;
+            }
+            let yourSign = data[i - 1].signName;
+            return console.log(`Your Zodiac sign is ${yourSign}`);
+        },
+    };
+    const data = [
+        { signName: "Not real day!", from: "0000" },
+        { signName: "Capricorn", from: "0101" },
+        { signName: "Aquarius", from: "0120" },
+        { signName: "Pisces", from: "0220" },
+        { signName: "Aries", from: "0321" },
+        { signName: "Taurus", from: "0420" },
+        { signName: "Gemini", from: "0521" },
+        { signName: "Cancer", from: "0621" },
+        { signName: "Leo", from: "0723" },
+        { signName: "Virgo", from: "0823" },
+        { signName: "Libra", from: "0923" },
+        { signName: "Scorpio", from: "1023" },
+        { signName: "Sagittarius", from: "1123" },
+        { signName: "Capricorn", from: "1222" },
+        { signName: "Not real day!", from: "1232" },
+    ];
+    return result.yourZodiac();
+};
 
-function zodiacSign(day, month) {
-    let astro_sign = "";
-
-    // checks month and date within the
-    // valid range of a specified zodiac
-    if (month == "december") {
-        if (day < 22) {
-            astro_sign = "Sagittarius";
-        } else {
-            astro_sign = "capricorn";
-        }
-    } else if (month == "january") {
-        if (day < 20) {
-            astro_sign = "Capricorn";
-        } else {
-            astro_sign = "aquarius";
-        }     
-    } else if (month == "february") {
-        if (day < 19) {
-            astro_sign = "Aquarius";
-        } else {
-            astro_sign = "pisces";
-        }     
-    } else if (month == "march") {
-        if (day < 21) {
-            astro_sign = "Pisces";
-        } else {
-            astro_sign = "aries";
-        }    
-    } else if (month == "april") {
-        if (day < 20) {
-            astro_sign = "Aries";
-        } else {
-            astro_sign = "taurus";
-        }    
-    } else if (month == "may") {
-        if (day < 21)
-            astro_sign = "Taurus";
-        else
-            astro_sign = "gemini";
-    }
-
-    else if (month == "june") {
-        if (day < 21)
-            astro_sign = "Gemini";
-        else
-            astro_sign = "cancer";
-    }
-
-    else if (month == "july") {
-        if (day < 23)
-            astro_sign = "Cancer";
-        else
-            astro_sign = "leo";
-    }
-
-    else if (month == "august") {
-        if (day < 23)
-            astro_sign = "Leo";
-        else
-            astro_sign = "virgo";
-    }
-
-    else if (month == "september") {
-        if (day < 23)
-            astro_sign = "Virgo";
-        else
-            astro_sign = "libra";
-    }
-
-    else if (month == "october") {
-        if (day < 23)
-            astro_sign = "Libra";
-        else
-            astro_sign = "scorpio";
-    }
-
-    else if (month == "november") {
-        if (day < 22)
-            astro_sign = "scorpio";
-        else
-            astro_sign = "sagittarius";
-    }
-
-    return astro_sign;
-}
-
-// Driver Code
-// console.log(zodiacSign(19, "May"));  
-// let day = 19;
-// let month = "may";
-console.log(zodiacSign(3, "december"));
-
+zodiac("14-02-2002");
+zodiac("01-09-1989");
+zodiac("03-12-1988");
 
 
 
@@ -185,7 +131,7 @@ console.log(objIvan.auto.model);
 
 
 
-console.log( "---------------");
+console.log("---------------");
 const obj = {
     firstN: "Ivan",
     lastN: "Chiosa",
@@ -200,7 +146,7 @@ const obj = {
 obj.display();
 
 const obj1 = {};
-obj1 ["nameFather"] = "Mario";
+obj1["nameFather"] = "Mario";
 console.log(obj1);
 obj1.nameFather = "Vasilli";
 console.log(obj1.nameFather);
@@ -217,26 +163,26 @@ console.log(Object.isSealed(obj));
 const nextEdge = (side1, side2) => {
     return console.log(side1 + side2);
 }
-nextEdge(6,3);
+nextEdge(6, 3);
 
 const nextEdge1 = (side1, side2) => {
     return console.log(side1 * side2);
 }
-nextEdge1(8,9);
+nextEdge1(8, 9);
 
 const nextEdge2 = (side1, side2) => {
     return console.log(side1 / side2);
 }
-nextEdge2(10,2);
+nextEdge2(10, 2);
 
-function nextEdge3 (side1, side2) {
+function nextEdge3(side1, side2) {
     return console.log(side1 % side2);
 }
 
-nextEdge3(50,6)
+nextEdge3(50, 6)
 
 const obj3 = {}
-obj3 ["name"] = "Ecaterina";
+obj3["name"] = "Ecaterina";
 console.log(obj3.name);
 obj3.name = "Maria";
 console.log(obj3.name);
@@ -258,8 +204,8 @@ console.log("---------");
 const object1 = {};
 
 Object.defineProperty(object1, 'property1', {
-  value: 42,
-  writable: true,
+    value: 42,
+    writable: true,
 });
 
 object1.property1 = 77;
@@ -281,7 +227,7 @@ console.log(object2.name);
 
 //Object.defineProperty()
 const userInfoObj = {};
-Object.defineProperty(userInfoObj,"name", {
+Object.defineProperty(userInfoObj, "name", {
     value: "Maria",
     writable: true,
 });
@@ -289,9 +235,9 @@ console.log(userInfoObj.name);
 
 // Object.defineProperties()
 Object.defineProperties(userInfoObj, {
-    lastName: {value:"Chiosa", writable: true},
-    act: {value: ["Cooking", "Biking"], writable: true },
-    cars: {value: ["V2"], writable: false},
+    lastName: { value: "Chiosa", writable: true },
+    act: { value: ["Cooking", "Biking"], writable: true },
+    cars: { value: ["V2"], writable: false },
 });
 console.log(userInfoObj.lastName, userInfoObj.act, userInfoObj.cars);
 
