@@ -49,6 +49,69 @@ red.name = "Red";
 red.tem = 32;
 console.log(red);
 
+const orange = new Color();
+orange.name = "Orange";
+console.log(orange);
+
+// TV App
+class Tv{
+    constructor(brand, channel, volume = 10) {
+        this.brand = brand;
+        this.channel = channel;
+        this.volume = volume;
+    }
+    inVolume () {
+        if ( this.volume < 100) {
+            this.volume++
+            console.log((this.volume));
+        } else {
+            console.log("This ist to loud");
+        }
+    }
+    decVolume () {
+        if ( this.volume > 0) {
+            this.volume--;
+            console.log(this.volume);
+        } else {
+            console.log("No Sound");
+        }
+    }
+    rest () {
+        this.channel = 1;
+        this.volume = 10;
+        console.log(this.volume);
+    }
+    randomChannel () {
+        this.channel = Math.floor(Math.random() * 10) + 1;
+    }
+    display () {
+        return `This ${this.brand} Tv, has channel ${this.channel} on right now . The volume is currently at ${this.volume}`;
+    }
+}
+const samsung = new Tv("Samsung",50,20);
+console.log(samsung);
+samsung.inVolume();
+samsung.inVolume();
+samsung.inVolume();
+samsung.inVolume();
+
+console.log("------");
+samsung.decVolume();
+samsung.decVolume();
+samsung.decVolume();
+samsung.rest();
+samsung.randomChannel();
+console.log(samsung);
+samsung.display();
+console.log(samsung.display());
+
+const lg = new Tv("LG", 80);
+
+
+
+
+
+
 
 
 // constructor method aka setup
