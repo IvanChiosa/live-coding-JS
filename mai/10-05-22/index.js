@@ -126,7 +126,7 @@ const userCarData = {
         let arr = str.split(" ");
         this.year = arr[0];
         this.model = arr[1];
-        this.speed = arr[12];
+        this.speed = arr[2];
         this.price = arr[3];
     }
 };
@@ -151,6 +151,9 @@ function Person(name, age, add) {
 };
 const ivanData = new Person("Ivan", 37, "Köln");
 const aliData = new Person("Natalia", 40, "Bad Honnef")
+const marioData = new Person("Mario", 22, "Berlin");
 
+console.log("----- constructor------");
+console.log(marioData);
 ivanData.printOut();
 aliData.printOut();
