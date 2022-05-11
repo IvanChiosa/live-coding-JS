@@ -55,9 +55,7 @@ console.log("-------Calculator------");
 // calculator("13+2-5*2") ➞ 5
 // calculator("49/7*2-3") ➞ 11
 
-const calculator = (str) => {
-   return eval(str);
-};
+const calculator = (str) => Function(`return ${str}`)();
 console.log(calculator("23+4"));
 console.log(calculator("45-15"));
 console.log(calculator("13+2-5*2"));
@@ -72,10 +70,15 @@ console.log(calculator("49/7*2-3"));
 // 11111 -> this is not correct
 // de343ee -> this is not correct
 
-const cardValidation = (num) => {
+const cardValidation = (str) => {
    let cardVisa = num.length;
    let cardMaster = num.length;
    let cardAmExp = num.length;
+
+   if (isNaN(str)) {
+      return `You have to write only a numbers`
+   }
+   
 
    if (cardVisa === 16) {
       return `This is Visa card, I need your money!`;

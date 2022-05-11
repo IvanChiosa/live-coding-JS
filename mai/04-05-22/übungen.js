@@ -10,7 +10,7 @@
 
 // arrowFunc(true) ➞ true
 
-const arrowFunc = ((num) => num); 
+const arrowFunc = (param) => param; 
 console.log(arrowFunc(3));
 console.log(arrowFunc("3"));
 console.log(arrowFunc(true));
@@ -28,7 +28,7 @@ console.log("-----");
 
 // calculateFuel(3) ➞ 100
 
-const calculateFuel = (num) => (num < 10 ? 100 : num * 10);
+const calculateFuel = (km) => (km < 10 ? 100 : km * 10);
 console.log(calculateFuel(15));
 console.log(calculateFuel(23.5));
 console.log(calculateFuel(3));
