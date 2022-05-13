@@ -181,9 +181,9 @@ function permutation(string) {
       return this.#firstName;
     }
     set firstName(newFirstName) {
-      if (!newFirstName || newFirstName.length === 0) {
-        throw new Error("Leere Namen sind nicht erlaubt!");
-      }
+    //   if (!newFirstName || newFirstName.length === 0) {
+    //     throw new Error("Leere Namen sind nicht erlaubt!");
+    //   }
     }
   }
   
@@ -195,16 +195,62 @@ function permutation(string) {
 // Jeder Entwickler kann diese Variable an jeder Stelle im Programm ändern
 // Das ist möglicherweise nicht gewollt, sondern nur die Funktion count() soll diese Variable ändern dürfen.
 
-let counter = 0;
+// let counter = 0;
 
-function count() {
-  counter = counter + 1;
-}
+// function count() {
+//   counter = counter + 1;
+// }
 
-console.log(counter);
-count();
-count();
-count();
-counter = counter - 2;
-count();
-console.log(counter);
+// console.log(counter);
+// count();
+// count();
+// count();
+// counter = counter - 2;
+// count();
+// console.log(counter);
+
+
+class Employee {
+    #firstName;
+    #lastName;
+    #salary;
+    constructor(firstName, lastName, salary) {
+      this.#firstName = firstName;
+      this.#lastName = lastName;
+      this.#salary = salary;
+    }
+    display() {
+      console.log(`${this.#firstName} ${this.#lastName}`);
+      console.log(`Salary: ${this.#salary} €`);
+    }
+  }
+  
+  class Manager extends Employee {
+    #teamName;
+    constructor(firstName, lastName, salary, teamName) {
+      super(firstName, lastName, salary);
+      this.#teamName = teamName;
+    }
+    display() {
+      super.display();
+      console.log(this.#teamName);
+    }
+  }
+  
+  const employees = [];
+  
+  employees.push(new Employee("John", "Doe", 50000));
+  employees.push(new Employee("Bill", "Foo", 45000));
+  employees.push(new Manager("Frank", "Boss", 200000, "Marketing"));
+  
+  for (const employee of employees) {
+    console.log("-----------");
+    employee.display();
+    if (employee instanceof Employee) {
+      console.log("Der Mitarbeiter ist ein Angestellter");
+    }
+    if (employee instanceof Manager) {
+      console.log("Der Mitarbeiter ist ein Manager");
+    }
+    console.log("-----------");
+  }
