@@ -5,7 +5,7 @@ str = 5;
 str = "Cool";
 // String var str ="";
 
-// wenn brauche keine return wenn haben wir arrow function oder normale function // wenn ich meien function andern und hat keine value => keine return // wenn du hast auch console log
+// wenn brauche keine return wenn haben wir arrow function oder normale function // wenn ich meine function andern und hat keine value => keine return // wenn du hast auch console log
 // ... => ist die spred operation 
 // ...arg wir rufen unsere function mit mehr value
 // function params

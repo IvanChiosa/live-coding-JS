@@ -5,7 +5,7 @@
 let x = 0;
 
 
-// java ist eien synchronaus liest da oben nach untern und da links nach recht
+// java ist ein synchronaus liest da oben nach untern und da links nach recht
 let someThing = "text";
 console.log(sumUp(22,3));
 // mit hoisting ich kann anrufen befor ich deklariren verden
@@ -49,7 +49,7 @@ if ( totalItems > 150 ) {
     console.log("Nice you got free a gift");
 }else {
     // something false
-    console.log("Oh no you need to bay more");
+    console.log("Oh no you need to pay more");
 }
 
 console.log("---break---");

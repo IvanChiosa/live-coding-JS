@@ -27,10 +27,10 @@ zainbabyObj.printData();
 
 
 class KindUndKind extends Kind {
-    constructor (name, age, height, color) {
-        super(name,age,height);
-        this.color = color;
-    }
+  constructor (name, age, height, color) {
+    super(name,age,height);
+    this.color = color;
+  }
 }
 const kindUndKind = new KindUndKind("Mario",10,90, "White");
 console.log(kindUndKind);
@@ -134,7 +134,7 @@ const ivanStudio = [
     { day: "Mon", start: 9, end: 16 },
     { day: "Din", start: 9, end: 16 },
     { day: "Mitt", start: 9, end: 16 },
-    { day: "Don", start: 9, end: 16},
+    { day: "Don", start: 9, end: 16 },
     { day: "Fri", start: 9, end: 16 },
     { day: "Sam", start: 9, end: 18 },
 ];

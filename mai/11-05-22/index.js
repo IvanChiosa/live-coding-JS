@@ -12,7 +12,7 @@ const ecaterinaData = new Person("Ivan", 37, "Köln");
 console.log(ivanData.showData());
 
 
-// javascropt sehe nur die methode und die objeckt
+// javascript sehe nur die methode und die objeckt
 // Class 
 class Animals { // fur die constructor methode si scrive con il
     constructor (_kind, _hometown) {
@@ -104,18 +104,10 @@ samsung.randomChannel();
 console.log(samsung);
 samsung.display();
 console.log(samsung.display());
-
 const lg = new Tv("LG", 80);
 
 
 
-
-
-
-
-
 // constructor method aka setup
-
 // instance properties after constructor 
-
 // extends && super 
