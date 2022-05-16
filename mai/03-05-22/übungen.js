@@ -130,7 +130,7 @@ console.log(lessThan100(83, 34));
 // addition(9) ➞ 10
 
 // addition(-3) ➞ -2
-const addition = (num) => num + 1;
+const addition = (num) => num + 1; 
 console.log(addition(0));
 console.log(addition(-3));
 

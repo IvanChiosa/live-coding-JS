@@ -21,7 +21,6 @@ const printFunction  = (obj) => {
     // primitive ist eine string boolean null ...
     let age = obj.age;
     console.log(name,age);
-
     // mit emoji da scrivere 
 }
 
@@ -58,7 +57,9 @@ function AnimalsKrank(name,age, sickTyp) {
     this.name = name;
     this.age = age;
     this.sickTyp = sickTyp;
-    this.display = function () {return console.log(`${this.name} has ${this.sickTyp}. Gut Besserung`);}
+    this.display = function () {
+        return console.log(`${this.name} has ${this.sickTyp}. Gut Besserung`);
+    }
 };
 const dog = new AnimalsKrank("Max", 7, "Kopf Schmerzen");
 console.log(dog);
@@ -101,17 +102,10 @@ class Keyboard extends Laptop {
     }
 }
 const lg = new Keyboard("Lg", 150, "Black", "DE", false);
+console.log(lg);
 lg.display();
 lg.priceUp();
 lg.display();
-
-
-//  spread-operator
-const avg = (...numbers) => 
-//                                         to be sicker anfange von null 0
-   numbers.reduce((acc, val) => acc + val, 0) / numbers.length;
-console.log(avg(1,2,3,6,5,4,7,8,9));
-
 // spread operator in array
 const arr1 = ["This ", "is "];
 const arr2 = ["Cool"];
