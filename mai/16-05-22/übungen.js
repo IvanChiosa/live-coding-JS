@@ -56,7 +56,7 @@ console.log("-----06-----");
 // 20 -> 10100
 // 10-> 1010
 // 44-> 101100
-function convertToBinary1 (number) {
+function convertToBinary (number) {
     let num = number;
     let binary = (num % 2).toString();
     for (; num > 1; ) {
@@ -66,9 +66,9 @@ function convertToBinary1 (number) {
     return (binary);
 };
 console.log(
-    convertToBinary1(20),
-    convertToBinary1(10),
-    convertToBinary1(44),
+    convertToBinary(20),
+    convertToBinary(10),
+    convertToBinary(44),
 );
 
 
@@ -79,10 +79,11 @@ console.log("-----07-----");
 
 function isPandigital(num) {
 	let numStr = num.toString();
-	return (new Set(numStr.split(""))).size == 10;
+	return (new Set(numStr.split(""))).size === 10;
 };
-console.log(isPandigital("0123456789"));
+console.log(isPandigital("0123456789955"));
 console.log(isPandigital("01266666789"));
 
-
+const isPandigital1 = num => /0+1+2+3+4+5+6+7+8+9+/.test(String(num).split('').sort().join(''));
+console.log(isPandigital1("015678996325"));
 
