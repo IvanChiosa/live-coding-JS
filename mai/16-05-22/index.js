@@ -49,9 +49,73 @@ const newInfo = ppl.map(({ name, age}) => console.log(name, age));
 
 // IIFE
 // Immediately_Invoked Function Expression
+const sum = ((x,y)=> x + y )(4,5);
+console.log("Sum", sum);
+
+
+// constructor function
+function AnimalsKrank(name,age, sickTyp) {
+    this.name = name;
+    this.age = age;
+    this.sickTyp = sickTyp;
+    this.display = function () {return console.log(`${this.name} has ${this.sickTyp}. Gut Besserung`);}
+};
+const dog = new AnimalsKrank("Max", 7, "Kopf Schmerzen");
+console.log(dog);
+dog.display();
 
 
 // Class
+class Laptop {
+    // constructor method
+    constructor (model,price) {
+        this.model = model;
+        this.price = price;
+        this.display = function () {
+            console.log(`This Laptop is ${this.model} priced at ${this.price} €`);
+        }
+    }
+    priceUp() {
+        // this.price = this.price * 5 => Abkurtzung
+        // return bring uns nur eien value das vegen brauche wir eine runde clama ()
+        return (this.price *= 5);
+    }
+};
+const macBook = new Laptop("MacBook Pro 14in", 2500);
+macBook.display();
+macBook.priceUp();
+macBook.display();
 
 
-// 
+
+
+
+
+// extends  und super 
+class Keyboard extends Laptop {
+    constructor(model, price, color, lang, cable) {
+        super(model,price);
+        this.color = color;
+        this.lang = lang;
+        this.cable = cable;
+    }
+}
+const lg = new Keyboard("Lg", 150, "Black", "DE", false);
+lg.display();
+lg.priceUp();
+lg.display();
+
+
+//  spread-operator
+const avg = (...numbers) => 
+//                                         to be sicker anfange von null 0
+   numbers.reduce((acc, val) => acc + val, 0) / numbers.length;
+console.log(avg(1,2,3,6,5,4,7,8,9));
+
+// spread operator in array
+const arr1 = ["This ", "is "];
+const arr2 = ["Cool"];
+const totalArray = [...arr1, ...arr2];
+console.log(totalArray);
+
+for (let i = 0; i < arr1.length; i++) {}

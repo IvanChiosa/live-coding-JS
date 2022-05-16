@@ -90,5 +90,3 @@ const ivanName = new Name("john", "SMITH" );
 console.log(ivanName.fullname());
 console.log(ivanName.initials());
 console.log(ivanName.fname.charAt(0).toUpperCase() + ivanName.fname.slice(1));
-
-console.log(ivanName.lname.charAt(0).toLowerCase() + ivanName.lname.slice(1));
