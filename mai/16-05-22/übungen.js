@@ -31,6 +31,16 @@ const person = {
 const copyOfObject = Object.keys(person).reduce((obj,key) => Object.assign({}, obj, { [person[key]]: key }), {});
 console.log(copyOfObject);
 
+// Opt 2 
+const arr1 = ['name', 'age', 'country'];
+const arr2 = ['Tom', 30, 'Chile'];
+
+const obj = {};
+
+arr1.forEach((element, index) => {
+obj[element] = arr2[index];
+}); 
+
 
 console.log("-----05-----");
 // 5. Return Keys and Values. Write a program that takes an object and returns an array which contains two arrays: one for the keys of the object and the other for the values of the object.
@@ -85,5 +95,21 @@ console.log(isPandigital("0123456789955"));
 console.log(isPandigital("01266666789"));
 
 const isPandigital1 = num => /0+1+2+3+4+5+6+7+8+9+/.test(String(num).split('').sort().join(''));
-console.log(isPandigital1("015678996325"));
+console.log(isPandigital1("01234567895"));
 
+
+// B-3. Create Grid (10 Points)
+// Create a function createGrid
+
+// It should return a nested array representing a 2D grid, filled with a char.
+
+// It should accept two arguments:
+
+// size (which determines the number of nested arrays and the number of elements in each nested array) and
+// char (which determines the characters in each nested array).
+// Call your function and print the return value to the console.
+
+// Example and expected output:
+
+// console.log(createGrid(3, "*"));
+// [ [ '*', '*', '*' ], [ '*', '*', '*' ], [ '*', '*', '*' ] ] 
