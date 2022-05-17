@@ -1,115 +1,72 @@
-console.log("-----03-----");
-// / 3. Merge. Create a function that takes two objects as its parameters and merges them together into a new object.
+// 3. Merge. Create a function that takes two objects as its parameters and merges them together into a new object.
+
 // Example
-// let first = { firstName: "John", lastName: "Vooo" };
-// let last = { lastName: "Smith" };
+let first = { firstName: "John", lastName: "Vooo" };
+let last = { lastName: "Smith" };
 // Expected output:
 // {firstName: "John", lastName: "Smith"}
-const printObj = (obj1, obj2) => {
-    let first = obj1.firstName;
-    let last = obj2.lastName;
-    return {firstName: first,lastName: last};
+const mergeObj = (obj1, obj2) => {
+  return { ...obj1, ...obj2 };
 };
-console.log(printObj({firstName: "John", lastName: "Vooo" }, {lastName: "Smith"}));
 
+const mergeObj2 = (obj1, obj2) => Object.assign(obj1, obj2);
 
-console.log("-----04-----");
 // 4. Switch Keys and Values. Create a function to get a copy of an object. The copy must switch the keys and values.
+
 // Example:
-// let person = {
-//   name: "John",
-//   job: "teacher"
-// }
-// Expected Output:
-// {"John": name, "teacher": job}
-
-
 const person = {
-    name: "John",
-    job: "Teacher",
+  name: "John",
+  job: "teacher",
 };
-const copyOfObject = Object.keys(person).reduce((obj,key) => Object.assign({}, obj, { [person[key]]: key }), {});
-console.log(copyOfObject);
+// Expected Output:
+// {John: "name", teacher: "job"}
+const switchObj = (obj) => {
+  let newObj = {};
+  for (let key in obj) {
+    newObj[obj[key]] = key;
+  }
+  return newObj;
+};
 
-// Opt 2 
-const arr1 = ['name', 'age', 'country'];
-const arr2 = ['Tom', 30, 'Chile'];
-
-const obj = {};
-
-arr1.forEach((element, index) => {
-obj[element] = arr2[index];
-}); 
-
-
-console.log("-----05-----");
+console.log(switchObj(person));
 // 5. Return Keys and Values. Write a program that takes an object and returns an array which contains two arrays: one for the keys of the object and the other for the values of the object.
+
 // Examples:
 // { a: 1, b: 2, c: 3 } ➞ [["a", "b", "c"], [1, 2, 3]]
 // {key: true} ➞ [["key"], [true]]
-
-function keysAndValues(obj){
-    let keys = Object.keys(obj),
-        values = keys.map(function (key) {
-            return obj[key];
-        });
-    return [keys, values]; 
+const objToArray = (obj) => {
+  let keys = Object.keys(obj);
+  let values = Object.values(obj);
+  return [keys, values];
 };
-console.log(keysAndValues({ a: 1, b: 2, c: 3 }));
+console.log(objToArray({ a: 1, b: 2, c: 3 }));
 
-
-
-console.log("-----06-----");
 // Binary converter, convert any given number to binary.
 // Bounce : your code should be using one line only
 // Example :
 // 20 -> 10100
 // 10-> 1010
 // 44-> 101100
-function convertToBinary (number) {
-    let num = number;
-    let binary = (num % 2).toString();
-    for (; num > 1; ) {
-        num = parseInt(num / 2);
-        binary =  (num % 2) + (binary);
-    }
-    return (binary);
+const toBinary = (num) => num.toString(2);
+// Morgen 🫣
+const toDecimal = (num) => {
+  return parseInt(num, 2);
 };
-console.log(
-    convertToBinary(20),
-    convertToBinary(10),
-    convertToBinary(44),
-);
+console.log(toBinary(20));
+console.log(toBinary(10));
+console.log(toDecimal(101100));
 
-
-
-console.log("-----07-----");
 // A pandigital number contains all digits (0-9) at least once. Write a function that takes an integer, returning true if the integer is pandigital, and false otherwise.
-//isPandigital(0123456789) -> true
+// isPandigital(0123456789) -> true
+// isPandigital(126789) -> fasle
+// isPandigital(987654321100000007777) -> true
+// isPandigital(45362718905) -> true
 
-function isPandigital(num) {
-	let numStr = num.toString();
-	return (new Set(numStr.split(""))).size === 10;
+const isPandigital = (num) => {
+  let numToArr = num.toString().split("").sort();
+  let filteredArr = numToArr.filter((el, i) => numToArr.indexOf(el) == i);
+  return filteredArr.join("") == "0123456789";
 };
-console.log(isPandigital("0123456789955"));
-console.log(isPandigital("01266666789"));
-
-const isPandigital1 = num => /0+1+2+3+4+5+6+7+8+9+/.test(String(num).split('').sort().join(''));
-console.log(isPandigital1("01234567895"));
-
-
-// B-3. Create Grid (10 Points)
-// Create a function createGrid
-
-// It should return a nested array representing a 2D grid, filled with a char.
-
-// It should accept two arguments:
-
-// size (which determines the number of nested arrays and the number of elements in each nested array) and
-// char (which determines the characters in each nested array).
-// Call your function and print the return value to the console.
-
-// Example and expected output:
-
-// console.log(createGrid(3, "*"));
-// [ [ '*', '*', '*' ], [ '*', '*', '*' ], [ '*', '*', '*' ] ] 
+console.log(isPandigital(45362718905));
+console.log(isPandigital(987654321100000007777));
+console.log(isPandigital(126789));

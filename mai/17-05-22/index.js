@@ -62,25 +62,25 @@ console.log(fact(7));
 
 
 // Deep copy using recursion // inerhaldb di meien function rufe ich eine neue function
-// Deep copy using recursion 🤨
+//Deep copy using recursion 🤨
 function deepClone(val) {
-    // array
-    if (Array.isArray(val)) {
-      return val.map(deepClone);
-    }
-    // object
-    if (typeof val == "object") {
-      return Object.keys(val)
-        .map((key) => {
-          return { [key]: deepClone(val[key]) };
-        })
-        .reduce((acc, cur) => Object.assign(acc, cur), {});
-    }
-  
-    // all other val
-    return val;
+  // array
+  if (Array.isArray(val)) {
+    return val.map(deepClone);
   }
-  
-  const newCarDeepClone = deepClone(car);
-  newCarDeepClone.op.dash = "cool wood";
-  console.log(car);
+  // object
+  if (typeof val == "object") {
+    return Object.keys(val)
+      .map((key) => {
+        return { [key]: deepClone(val[key]) };
+      })
+      .reduce((acc, cur) => Object.assign(acc, cur), {});
+  }
+
+  // all other val
+  return val;
+}
+
+const newCarDeepClone = deepClone(car);
+newCarDeepClone.op.dash = "cool wood";
+console.log(car);
