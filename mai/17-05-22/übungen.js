@@ -59,3 +59,34 @@ console.log("-----05----");
 const sum = (num) => num.reduce((x,y) => x +y );
 console.log(sum([1,2,3,4,5]));
 console.log(sum([6,7,7]));
+
+
+console.log("-----05----");
+// Create a Book constructor that has two properties :
+
+// Title
+// Author
+// and two methods:
+
+// A method named getTitle that returns: "Title: " + the instance title.
+// A method named getAuthor that returns: "Author: " + the instance author.
+// and instantiate this constructor by creating 3 new books:
+
+// Pride and Prejudice - Jane Austen (PP)
+// Hamlet - William Shakespeare (H)
+// War and Peace - Leo Tolstoy (WP)
+// The name of the new object instances PP, H, and WP, respectively.
+
+// For instance, if I instantiated the following book using this Book constructor function:
+
+// Harry Potter - J.K. Rowling (HP)
+// I would get the following properties and methods:
+
+// Examples
+// HP.title ➞ "Harry Potter"
+// HP.author ➞ "J.K. Rowling"
+// HP.getTitle() ➞ "Title: Harry Potter"
+// HP.getAuthor() ➞ "Author: J.K. Rowling"
+// Notes
+// Read more about constructor functions in Resources.
+// Remember, after you've finished writing the constructor function, you must instantiate it through the creation of new objects.
