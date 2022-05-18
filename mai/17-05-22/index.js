@@ -2,7 +2,7 @@
 // Primitive (Simple values are always clones)
 // String Number Boolean
 let x = 5; 
-let val = 5; //Val ist clones // nur primitive value cann du clonnen 
+let val = x; //Val ist clones // nur primitive value cann du clonnen 
 console.log(val);
 val = 333;
 console.log(val);
