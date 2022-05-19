@@ -1,0 +1,20 @@
+{
+  "name": "19-05-22",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "chmod +x src/index.js && npm link" 
+  },
+  "bin" : {
+    "weather": "src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1"
+  },
+  "description": ""
+}

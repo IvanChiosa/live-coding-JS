@@ -37,7 +37,7 @@ const car = {
     op: {
         leatherFinish: true,
         dash: "Wood",
-    }
+  }
 }
 
 
