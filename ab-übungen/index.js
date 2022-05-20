@@ -1092,3 +1092,45 @@ const totalArray = [...arr1, ...arr2];
 console.log(totalArray);
 
 for (let i = 0; i < arr1.length; i++) {}
+
+// Clones vs.Reference 
+// Primitive (Simple values are always clones)
+// String Number Boolean
+let x = 5; 
+let val = x; //Val ist clones // nur primitive value cann du clonnen 
+console.log(val);
+val = 333;
+console.log(val);
+const obj = {
+    id: 22
+}
+let ref = obj; // Das ist eine referenze nicht clonnen => obj oder arr 
+ref.id = 55;
+console.log(obj.id);
+
+const names = ["Ivan", "Zain", "Steel"];
+let arrRef = names; // referenz
+
+// Cloning Array using 
+// Method 1
+const newArrSpread = [...names] // copie of meine arra clones
+
+// Method 2
+const newArrWhitMap = names.map((ele) => ele); // clone 
+
+// Method 3
+const newArrWhitSlice = names.slice(0);
+
+// Method 4
+const newArrWhitConcat = [].concat(names); // clone
+
+// colors: ["Red", "Sliwer", "White"],
+const car = {
+    brandName: "Audi", // clon
+    price:  2022, //clon
+    colors: ["Red", "Sliwer", "White"], // array referenz
+    op: {
+        leatherFinish: true,
+        dash: "Wood",
+  }
+}
